@@ -11,3 +11,9 @@ function grow(x) {
 function countSheeps(arrayOfSheeps) {
   return arrayOfSheeps.filter(Boolean).length;
 }
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args);
+  }
+}
