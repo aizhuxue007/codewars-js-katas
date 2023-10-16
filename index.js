@@ -17,3 +17,7 @@ class SmallestIntegerFinder {
     return Math.min(...args);
   }
 }
+
+function countPositivesSumNegatives(input) {
+  return input && input !== null && input.length > 0 ? [ input.filter(num => num > 0).length, input.filter(num => num < 0).reduce((sum, curr) => sum + curr) ] : [];
+}
