@@ -25,3 +25,11 @@ function countPositivesSumNegatives(input) {
 function removeExclamationMarks(s) {
   return s.split('!').join('');
 }
+
+function squareDigits(num){
+  let output = '', strNum = String(num);
+  for (let i = 0; i < strNum.length; i++) {
+    output += Number(strNum[i]) ** 2;
+  }
+  return Number(output);
+}
