@@ -37,3 +37,7 @@ function squareDigits(num){
 function evenOrOdd(number) {
   return number % 2 === 0 ? 'Even' : 'Odd';
 }
+
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
