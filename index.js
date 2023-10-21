@@ -41,3 +41,7 @@ function evenOrOdd(number) {
 function hero(bullets, dragons){
   return bullets >= dragons * 2
 }
+
+String.prototype.isUpperCase = function() {
+  return this == this.toUpperCase()
+}
