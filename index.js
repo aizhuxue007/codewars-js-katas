@@ -45,3 +45,7 @@ function hero(bullets, dragons){
 String.prototype.isUpperCase = function() {
   return this == this.toUpperCase()
 }
+
+function makeNegative(num) {
+  return -Math.abs(num);
+}
