@@ -49,3 +49,7 @@ String.prototype.isUpperCase = function() {
 function makeNegative(num) {
   return -Math.abs(num);
 }
+
+function areYouPlayingBanjo(name) {
+  return `${name} ${(name[0].toLowerCase() === 'r' ? 'plays': 'does not play')} banjo`;
+}
