@@ -57,3 +57,8 @@ function areYouPlayingBanjo(name) {
 function digitize(n) {
   return String(n).split('').map(Number).reverse();
 }
+
+function betterThanAverage(classPoints, yourPoints) {
+  let classPointsAverage = classPoints.reduce((acc, curr) => acc + curr) / classPoints.length;
+  return yourPoints > classPointsAverage ? true : false;
+}
