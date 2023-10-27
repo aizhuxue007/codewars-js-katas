@@ -62,3 +62,8 @@ function betterThanAverage(classPoints, yourPoints) {
   let classPointsAverage = classPoints.reduce((acc, curr) => acc + curr) / classPoints.length;
   return yourPoints > classPointsAverage ? true : false;
 }
+
+function distanceBetweenPoints(a, b) {
+  // return Math.sqrt( (b.x - a.x) ** 2 + (b.y - a.y) ** 2 ); -> my answer
+  return Math.hypot(b.x - a.x, b.y - a.y); // -> most upvoted
+}
