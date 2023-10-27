@@ -67,3 +67,7 @@ function distanceBetweenPoints(a, b) {
   // return Math.sqrt( (b.x - a.x) ** 2 + (b.y - a.y) ** 2 ); -> my answer
   return Math.hypot(b.x - a.x, b.y - a.y); // -> most upvoted
 }
+
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
