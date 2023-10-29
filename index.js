@@ -80,3 +80,8 @@ var hotpo = function(n, acc = 0) {
     return hotpo(n % 2 == 0 ? n / 2 : 3 * n + 1, acc + 1)
   }
 }
+
+function excludingVatPrice(price){
+  return price == null ? -1 : +(price / (1.15 * 100) * 100).toFixed(2);
+}
+
