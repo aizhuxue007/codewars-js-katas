@@ -85,3 +85,6 @@ function excludingVatPrice(price){
   return price == null ? -1 : +(price / (1.15 * 100) * 100).toFixed(2);
 }
 
+function mergeArrays(a, b) {
+  return [...new Set([...a, ...b].sort((x, y) => x - y))]
+}
