@@ -88,3 +88,14 @@ function excludingVatPrice(price){
 function mergeArrays(a, b) {
   return [...new Set([...a, ...b].sort((x, y) => x - y))]
 }
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    
+  }
+  get info() {
+      return `${this.name}s age is ${this.age}`
+  } 
+}
