@@ -99,3 +99,7 @@ class Person {
       return `${this.name}s age is ${this.age}`
   } 
 }
+
+function lovefunc(flower1, flower2){
+  return flower1 % 2 !== flower2 % 2 ? true : false;
+}
