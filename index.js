@@ -101,5 +101,11 @@ class Person {
 }
 
 function lovefunc(flower1, flower2){
-  return flower1 % 2 !== flower2 % 2 ? true : false;
+  return flower1 % 2 !== flower2 % 2;
+}
+
+class Solution{
+  static main(param1, param2) {
+    console.log('Hello World!')
+  }
 }
