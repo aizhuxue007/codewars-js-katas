@@ -128,3 +128,7 @@ function bmi(weight, height) {
 String.prototype.toAlternatingCase = function () {
   return this.split('').map(c => c == c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()).join('')
 }
+
+function bigToSmall(arr) {
+  return [].concat(...arr).sort((a, b) => b - a).join('>');
+}
