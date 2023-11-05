@@ -121,7 +121,6 @@ function bmi(weight, height) {
     return 'Overweight';
     default:
     return 'Obese';
-    
   }
 }
 
@@ -131,4 +130,12 @@ String.prototype.toAlternatingCase = function () {
 
 function bigToSmall(arr) {
   return [].concat(...arr).sort((a, b) => b - a).join('>');
+}
+
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+}
+
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((acc, curr) => acc + curr )
 }
