@@ -143,3 +143,7 @@ function arrayPlusArray(arr1, arr2) {
 function find_difference(a, b) {
   return Math.abs(a.reduce((curr, val) => curr * val) - b.reduce((curr, val) => curr * val));
 }
+
+function binToDec(bin) {
+  return parseInt(bin, 2);
+}
