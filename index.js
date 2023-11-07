@@ -139,3 +139,7 @@ function arrayPlusArray(arr1, arr2) {
 function arrayPlusArray(arr1, arr2) {
   return arr1.concat(arr2).reduce((acc, curr) => acc + curr )
 }
+
+function find_difference(a, b) {
+  return Math.abs(a.reduce((curr, val) => curr * val) - b.reduce((curr, val) => curr * val));
+}
