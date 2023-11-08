@@ -147,3 +147,7 @@ function find_difference(a, b) {
 function binToDec(bin) {
   return parseInt(bin, 2);
 }
+
+function positiveSum(arr) {
+  return arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
+}
