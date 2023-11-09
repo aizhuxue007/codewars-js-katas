@@ -151,3 +151,7 @@ function binToDec(bin) {
 function positiveSum(arr) {
   return arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
 }
+
+function hexToDec(hexString){
+  return  parseInt(hexString, 16);
+ }
