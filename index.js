@@ -154,4 +154,10 @@ function positiveSum(arr) {
 
 function hexToDec(hexString){
   return  parseInt(hexString, 16);
- }
+}
+
+function between(a, b) {
+  arr = [];
+  for (i = a; i <= b; i++) arr.push(i)
+  return arr;
+}
