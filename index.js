@@ -161,3 +161,7 @@ function between(a, b) {
   for (i = a; i <= b; i++) arr.push(i)
   return arr;
 }
+
+function aspectRatio(x,y){
+  return [Math.ceil((16/9) * y), y];
+}
