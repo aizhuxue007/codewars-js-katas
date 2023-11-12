@@ -165,3 +165,7 @@ function between(a, b) {
 function aspectRatio(x,y){
   return [Math.ceil((16/9) * y), y];
 }
+
+function squareSum(numbers){
+  return numbers.reduce((acc, curr) => acc + curr ** 2, 0);
+}
