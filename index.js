@@ -169,3 +169,5 @@ function aspectRatio(x,y){
 function squareSum(numbers){
   return numbers.reduce((acc, curr) => acc + curr ** 2, 0);
 }
+
+const uniTotal = (string) => [...string].reduce((acc, curr) => acc + curr.charCodeAt(0), 0);
