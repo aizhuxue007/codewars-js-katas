@@ -171,3 +171,7 @@ function squareSum(numbers){
 }
 
 const uniTotal = (string) => [...string].reduce((acc, curr) => acc + curr.charCodeAt(0), 0);
+
+function anyArrows(arrows){
+  return arrows.some(arrow => !arrow.damaged);
+}
