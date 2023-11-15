@@ -175,3 +175,7 @@ const uniTotal = (string) => [...string].reduce((acc, curr) => acc + curr.charCo
 function anyArrows(arrows){
   return arrows.some(arrow => !arrow.damaged);
 }
+
+function arr2bin(arr) {
+  return arr.reduce((acc, curr) => typeof curr == 'number' ? acc + curr: acc, 0).toString(2)
+}
