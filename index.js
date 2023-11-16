@@ -179,3 +179,9 @@ function anyArrows(arrows){
 function arr2bin(arr) {
   return arr.reduce((acc, curr) => typeof curr == 'number' ? acc + curr: acc, 0).toString(2)
 }
+
+function addExtra( listOfNumbers ){
+  let newList = listOfNumbers.map(x => x);
+  newList.push(1)
+  return newList;
+}
