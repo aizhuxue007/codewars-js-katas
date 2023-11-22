@@ -11,3 +11,8 @@ function sumMul(n,m){
     }
     return sum;
 }
+
+const flip=(d, a)=>{
+  if (d === 'R') return a.sort((x, y) => x - y );
+  if (d === 'L') return a.sort((x, y) => y - x );
+}
