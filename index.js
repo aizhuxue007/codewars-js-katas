@@ -203,3 +203,7 @@ function datingRange(age){
 function feast(beast, dish) {
   return beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length - 1) == dish.charAt(dish.length - 1);
 }
+
+function fakeBin(x) {
+  return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
