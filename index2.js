@@ -16,3 +16,7 @@ const flip=(d, a)=>{
   if (d === 'R') return a.sort((x, y) => x - y );
   if (d === 'L') return a.sort((x, y) => y - x );
 }
+
+var findAverage = function (nums) {
+  return nums.reduce((acc, curr) => acc + curr) / nums.length;
+}
