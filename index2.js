@@ -20,3 +20,7 @@ const flip=(d, a)=>{
 var findAverage = function (nums) {
   return nums.reduce((acc, curr) => acc + curr) / nums.length;
 }
+
+function addLength(str) {
+  return str.split(" ").map(word => word + ` ${word.length}`);
+}
