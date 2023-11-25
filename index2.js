@@ -24,3 +24,8 @@ var findAverage = function (nums) {
 function addLength(str) {
   return str.split(" ").map(word => word + ` ${word.length}`);
 }
+
+var Ghost = function() {
+  let colors = ['white', 'yellow', 'purple', 'red'];
+  this.color = colors[Math.floor(Math.random() * 4)];
+}
