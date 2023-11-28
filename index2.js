@@ -45,3 +45,12 @@ function points(games) {
     
   }, 0)
 }
+
+function doTurn () {
+  rollDice();
+  move();
+  combat();
+  getCoins();
+  buyHealth();
+  printStatus();
+}
