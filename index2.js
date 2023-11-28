@@ -33,3 +33,15 @@ var Ghost = function() {
 function move (position, roll) {
   return position + roll * 2;
 }
+
+function points(games) {
+  return games.reduce((acc, curr) => {
+    let x = Number(curr.charAt(0));
+    let y = Number(curr.charAt(curr.length - 1));
+    if (x > y) return acc += 3;
+    if (x < y) return acc += 0;
+    if (x == y) return acc += 1;
+    console.log(acc)
+    
+  }, 0)
+}
