@@ -71,3 +71,9 @@ function quadrant(x, y) {
 function getVowelCount(str) {
   return (str.match(/[aeiou]/ig) || [] ).length;
 }
+
+function validateHello(greetings) {
+  let pattern = /(hello|english|ciao|salut|hallo|hola|ahoj|czesc)/
+  let res =  pattern.test(greetings.toLowerCase()) 
+  return res
+}
