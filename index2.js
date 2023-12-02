@@ -67,3 +67,7 @@ function quadrant(x, y) {
   if (x < 0 && y < 0) return 3;
   return 4
 }
+
+function getVowelCount(str) {
+  return (str.match(/[aeiou]/ig) || [] ).length;
+}
