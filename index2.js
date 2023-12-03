@@ -77,3 +77,8 @@ function validateHello(greetings) {
   let res =  pattern.test(greetings.toLowerCase()) 
   return res
 }
+
+function ifChuckSaysSo()
+{
+  return !true;
+}
