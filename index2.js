@@ -86,3 +86,7 @@ function ifChuckSaysSo()
 function quadratic(x1, x2){
   return [1, -(x1 + x2), (x1 * x2)];
 }
+
+function whoIsPaying(name){
+  return name.length > 2 ? [name, name.substr(0, 2)] : [name];
+}
