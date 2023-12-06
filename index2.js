@@ -90,3 +90,7 @@ function quadratic(x1, x2){
 function whoIsPaying(name){
   return name.length > 2 ? [name, name.substr(0, 2)] : [name];
 }
+
+const integrate = (coefficient, exponent) => {
+  return coefficient / (exponent + 1) + 'x^' + (exponent + 1);
+}
