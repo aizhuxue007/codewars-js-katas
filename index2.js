@@ -94,3 +94,7 @@ function whoIsPaying(name){
 const integrate = (coefficient, exponent) => {
   return coefficient / (exponent + 1) + 'x^' + (exponent + 1);
 }
+
+function remainder(a, b){
+  return (a > b) ? (a % b) : (b % a);
+}
