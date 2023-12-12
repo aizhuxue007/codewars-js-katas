@@ -11,10 +11,22 @@ function htmlspecialchars(formData) {
 }
 
 function isPythagoreanTriple(integers) {
-    let orderedInts = integers.sort((a, b) => a - b)
-    return orderedInts[0] ** 2 + orderedInts[1] ** 2 === orderedInts[2] ** 2;
-  }
+  let orderedInts = integers.sort((a, b) => a - b);
+  return orderedInts[0] ** 2 + orderedInts[1] ** 2 === orderedInts[2] ** 2;
+}
 
-  function closeCompare(a, b, m = 0){
-    return Math.abs(a - b) <= m ? 0 : Math.sign(a - b);
+function closeCompare(a, b, m = 0) {
+  return Math.abs(a - b) <= m ? 0 : Math.sign(a - b);
+}
+
+class Ship {
+  constructor(draft,crew){
+   this.draft = draft;
+   this.crew = crew;
   }
+   
+   isWorthIt(){
+    return this.draft - (this.crew * 1.5) > 20;
+   }
+}
+
