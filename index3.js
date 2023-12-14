@@ -39,6 +39,10 @@ class Cube {
   }
   setSide(side = 0) {
     this.side = Math.abs(side);
-    
+
   }
+}
+
+function duckDuckGoose(players, goose) {
+  return players[(goose-1)%players.length].name
 }
