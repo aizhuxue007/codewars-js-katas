@@ -46,3 +46,7 @@ class Cube {
 function duckDuckGoose(players, goose) {
   return players[(goose-1)%players.length].name
 }
+
+function derive(coefficient,exponent) {
+  return `${coefficient * exponent}x^${exponent - 1}`
+}
