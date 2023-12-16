@@ -50,3 +50,7 @@ function duckDuckGoose(players, goose) {
 function derive(coefficient,exponent) {
   return `${coefficient * exponent}x^${exponent - 1}`
 }
+
+function multiply(number){
+  return number * (5 ** String(Math.abs(number)).length)
+}
