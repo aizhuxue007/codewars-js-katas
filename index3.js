@@ -54,3 +54,8 @@ function derive(coefficient,exponent) {
 function multiply(number){
   return number * (5 ** String(Math.abs(number)).length)
 }
+
+function sameCase(a, b){
+  return ((/[a-zA-Z]/).test(a) && (/[a-zA-Z]/).test(b)) ?
+    (a === a.toUpperCase() && b === b.toUpperCase()) || (a === a.toLowerCase() && b === b.toLowerCase()) ? 1 : 0 : -1;
+}
