@@ -59,3 +59,9 @@ function sameCase(a, b){
   return ((/[a-zA-Z]/).test(a) && (/[a-zA-Z]/).test(b)) ?
     (a === a.toUpperCase() && b === b.toUpperCase()) || (a === a.toLowerCase() && b === b.toLowerCase()) ? 1 : 0 : -1;
 }
+
+function usdcny(usd) {
+    let cny = usd * 6.75;
+
+    return `${cny.toFixed(2)} Chinese Yuan`;
+}
