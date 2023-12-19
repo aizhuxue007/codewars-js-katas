@@ -64,3 +64,12 @@ function usdcny(usd) {
     let cny = usd * 6.75;
     return `${cny.toFixed(2)} Chinese Yuan`;
 }
+
+function validateUsr(username) {
+  const res =  /^[a-z0-9_]*$/gm.test(username);
+  return (username.length >= 4 && username.length <= 16 && res) ? true : false;
+}
+
+// function validateUsr(username) {
+//   return /^[0-9a-z_]{4,16}$/.test(username)
+// }
