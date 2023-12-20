@@ -73,3 +73,7 @@ function validateUsr(username) {
 // function validateUsr(username) {
 //   return /^[0-9a-z_]{4,16}$/.test(username)
 // }
+
+function take(arr, n) {
+  return arr.slice(0, n)
+}
