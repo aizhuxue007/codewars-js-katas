@@ -77,3 +77,6 @@ function validateUsr(username) {
 function take(arr, n) {
   return arr.slice(0, n)
 }
+
+const hello = s => 
+  `Hello, ${s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : 'World'}!`;
