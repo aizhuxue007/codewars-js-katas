@@ -91,3 +91,5 @@ function defineSuit(card) {
 
   return suits[card.slice(-1)]
 }
+
+const doubleChar = (str) => str.split('').map(c => c + c).join('');
