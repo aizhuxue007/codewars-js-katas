@@ -93,3 +93,7 @@ function defineSuit(card) {
 }
 
 const doubleChar = (str) => str.split('').map(c => c + c).join('');
+
+var templateStrings = function (noun, adjective) {
+  return `${noun} are ${adjective}`;
+}
