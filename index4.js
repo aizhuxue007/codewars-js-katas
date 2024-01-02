@@ -28,10 +28,6 @@ function rainAmount(mm){
 }
 
 function  calculateAge(birthYear, relationYear) {
-  //   if birthYear is greater than relationYear
-  //    return string with birthYear - relationYear
-  //   else
-  //    return string with relationYear - birthYear
     let years;
     if (relationYear > birthYear) {
       years = relationYear - birthYear
@@ -42,4 +38,9 @@ function  calculateAge(birthYear, relationYear) {
     } else {
       return `You were born this very year!`;
     }
+}
+
+function alphabetPosition(text) {
+    return text.split('').filter(char => char.toLowerCase().match(/[a-z]/i) ? char.toLowerCase() : '').map(letter => letter.toLowerCase().charCodeAt(0) - 96)
+      .join(' ');
   }
