@@ -21,26 +21,26 @@ var cubeChecker = function (volume, side) {
   return side ** 3 === volume && side > 0;
 };
 
-function rainAmount(mm){
-  if (mm < 40) 
+function rainAmount(mm) {
+  if (mm < 40)
     return `You need to give your plant ${40 - mm}mm of water`
   return `Your plant has had more than enough water for today!`
 }
 
-function  calculateAge(birthYear, relationYear) {
-    let years;
-    if (relationYear > birthYear) {
-      years = relationYear - birthYear
-      return `You are ${years} year${years > 1 ? 's': ''} old.`
-    } else if (birthYear > relationYear) {
-      years = birthYear - relationYear
-      return `You will be born in ${years} year${years > 1 ? 's': ''}.`
-    } else {
-      return `You were born this very year!`;
-    }
+function calculateAge(birthYear, relationYear) {
+  let years;
+  if (relationYear > birthYear) {
+    years = relationYear - birthYear
+    return `You are ${years} year${years > 1 ? 's' : ''} old.`
+  } else if (birthYear > relationYear) {
+    years = birthYear - relationYear
+    return `You will be born in ${years} year${years > 1 ? 's' : ''}.`
+  } else {
+    return `You were born this very year!`;
+  }
 }
 
 function alphabetPosition(text) {
-    return text.split('').filter(char => char.toLowerCase().match(/[a-z]/i) ? char.toLowerCase() : '').map(letter => letter.toLowerCase().charCodeAt(0) - 96)
-      .join(' ');
-  }
+  return text.split('').filter(char => char.toLowerCase().match(/[a-z]/i) ? char.toLowerCase() : '').map(letter => letter.toLowerCase().charCodeAt(0) - 96)
+    .join(' ');
+}
