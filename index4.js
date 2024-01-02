@@ -26,3 +26,20 @@ function rainAmount(mm){
     return `You need to give your plant ${40 - mm}mm of water`
   return `Your plant has had more than enough water for today!`
 }
+
+function  calculateAge(birthYear, relationYear) {
+  //   if birthYear is greater than relationYear
+  //    return string with birthYear - relationYear
+  //   else
+  //    return string with relationYear - birthYear
+    let years;
+    if (relationYear > birthYear) {
+      years = relationYear - birthYear
+      return `You are ${years} year${years > 1 ? 's': ''} old.`
+    } else if (birthYear > relationYear) {
+      years = birthYear - relationYear
+      return `You will be born in ${years} year${years > 1 ? 's': ''}.`
+    } else {
+      return `You were born this very year!`;
+    }
+  }
