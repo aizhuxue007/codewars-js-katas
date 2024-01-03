@@ -44,3 +44,24 @@ function alphabetPosition(text) {
   return text.split('').filter(char => char.toLowerCase().match(/[a-z]/i) ? char.toLowerCase() : '').map(letter => letter.toLowerCase().charCodeAt(0) - 96)
     .join(' ');
 }
+
+function fuelPrice(litres, pricePerLitre) {
+  let discount
+  if (litres > 8) discount = 0.25
+  else if (litres >= 6) discount = 0.20
+  else if (litres >= 4) discount = 0.10
+  else if (litres >= 2) discount = 0.05
+  else discount = 0
+  // return total cost of litres times (pricePerLitre - discount), rounded to nearest 2 decimal places
+  return parseFloat((litres * (pricePerLitre - discount)).toFixed(2))
+}
+
+/** Best solution for fuelPrice */
+// function fuelPrice(litres, pricePerLiter) {
+//   for (var i = 2; i <= 10; i +=2) { //discount loop
+//     if (litres >= i) {
+//       pricePerLiter -= 0.05;
+//     }
+//   }
+//   return Math.round(litres * pricePerLiter * 100) / 100;;
+// }
