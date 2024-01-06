@@ -74,3 +74,15 @@ var quote = function(fighter) {
 function toCsvText(array) {
   return array.join('\n')
 }
+
+function pipeFix(numbers){
+    let stop = Math.max(...numbers)
+    let start = Math.min(...numbers)
+    let result = []
+      
+    for (let i = start; i <= stop; i++) {
+      result.push(i)
+    }
+    
+    return result
+  }
