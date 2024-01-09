@@ -6,8 +6,8 @@ function leo(oscar) {
 }
 
 function slope(points) {
-    const rise = points[1] - points[3]
-    const run = points[0] - points[2]
-    if (run == 0) return 'undefined'
-    return String(rise / run)
-  }
+  const rise = points[1] - points[3];
+  const run = points[0] - points[2];
+  if (run == 0) return "undefined";
+  return String(rise / run);
+}
