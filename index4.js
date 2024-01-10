@@ -106,11 +106,3 @@ function warnTheSheep(queue) {
     ? `Pls go away and stop eating my sheep`
     : `Oi! Sheep number ${position}! You are about to be eaten by a wolf!`;
 }
-
-function remove (string) {  
-  let strArr = string.split('')
-  for (let i = string.length - 1; strArr[i] == '!'; i--) {
-    strArr.pop()
-  }
-  return strArr.join('')
-}
