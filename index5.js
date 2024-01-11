@@ -12,10 +12,14 @@ function slope(points) {
   return String(rise / run);
 }
 
-function remove(string) {  
+function remove(string) {
   let strArr = string.split('')
   for (let i = string.length - 1; strArr[i] == '!'; i--) {
     strArr.pop()
   }
   return strArr.join('')
+}
+
+function sayHello(name, city, state) {
+  return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
 }
