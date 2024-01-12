@@ -44,3 +44,7 @@ const binaryArrayToNumber = (arr) => {
   const binString = arr.join("");
   return parseInt(binString, 2);
 };
+
+function invert(array) {
+  return array.map((num) => num * -1);
+}
