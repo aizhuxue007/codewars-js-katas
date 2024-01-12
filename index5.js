@@ -32,3 +32,10 @@ function sumTwoSmallestNumbers(numbers) {
   numbers.sort((a, b) => a - b);
   return numbers[0] + numbers[1];
 }
+
+function createPhoneNumber(numbers) {
+  const areaCode = numbers.slice(0, 3).join("");
+  const telephonePrefix = numbers.slice(3, 6).join("");
+  const lineNumber = numbers.slice(6).join("");
+  return `(${areaCode}) ${telephonePrefix}-${lineNumber}`;
+}
