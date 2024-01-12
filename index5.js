@@ -39,3 +39,8 @@ function createPhoneNumber(numbers) {
   const lineNumber = numbers.slice(6).join("");
   return `(${areaCode}) ${telephonePrefix}-${lineNumber}`;
 }
+
+const binaryArrayToNumber = (arr) => {
+  const binString = arr.join("");
+  return parseInt(binString, 2);
+};
