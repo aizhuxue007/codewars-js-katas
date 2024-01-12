@@ -13,13 +13,17 @@ function slope(points) {
 }
 
 function remove(string) {
-  let strArr = string.split('')
-  for (let i = string.length - 1; strArr[i] == '!'; i--) {
-    strArr.pop()
+  let strArr = string.split("");
+  for (let i = string.length - 1; strArr[i] == "!"; i--) {
+    strArr.pop();
   }
-  return strArr.join('')
+  return strArr.join("");
 }
 
 function sayHello(name, city, state) {
-  return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+  return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
+}
+
+function maps(x) {
+  return x.map(num => num * 2);
 }
