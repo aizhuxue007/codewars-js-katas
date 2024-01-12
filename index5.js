@@ -25,5 +25,10 @@ function sayHello(name, city, state) {
 }
 
 function maps(x) {
-  return x.map(num => num * 2);
+  return x.map((num) => num * 2);
+}
+
+function sumTwoSmallestNumbers(numbers) {
+  numbers.sort((a, b) => a - b);
+  return numbers[0] + numbers[1];
 }
