@@ -48,3 +48,13 @@ const binaryArrayToNumber = (arr) => {
 function invert(array) {
   return array.map((num) => num * -1);
 }
+
+function accum(s) {
+  return s
+    .split("")
+    .map(
+      (letter, index) =>
+        letter.toUpperCase() + letter.toLowerCase().repeat(index)
+    )
+    .join("-");
+}
