@@ -58,3 +58,10 @@ function accum(s) {
     )
     .join("-");
 }
+
+function candies(kids) {
+  const max = Math.max(...kids)
+  if (kids.length < 2) return -1;
+  return kids.reduce((acc, kid) => acc + (max - kid)
+    , 0)
+}
