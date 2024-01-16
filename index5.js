@@ -67,6 +67,5 @@ function candies(kids) {
 
 function isItANum(str) {
   const numbers = str.match(/(\d+)/g).join("");
-  console.log("numbers", numbers);
   return numbers.match(/^0\d{10}$/g) ? numbers : "Not a phone number";
 }
