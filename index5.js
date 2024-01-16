@@ -60,8 +60,13 @@ function accum(s) {
 }
 
 function candies(kids) {
-  const max = Math.max(...kids)
+  const max = Math.max(...kids);
   if (kids.length < 2) return -1;
-  return kids.reduce((acc, kid) => acc + (max - kid)
-    , 0)
+  return kids.reduce((acc, kid) => acc + (max - kid), 0);
+}
+
+function isItANum(str) {
+  const numbers = str.match(/(\d+)/g).join("");
+  console.log("numbers", numbers);
+  return numbers.match(/^0\d{10}$/g) ? numbers : "Not a phone number";
 }
