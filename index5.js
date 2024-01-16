@@ -69,3 +69,7 @@ function isItANum(str) {
   const numbers = str.match(/(\d+)/g).join("");
   return numbers.match(/^0\d{10}$/g) ? numbers : "Not a phone number";
 }
+
+function filter_list(l) {
+    return l.filter(item => Number.isInteger(item))
+}
