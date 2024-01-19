@@ -73,3 +73,11 @@ function isItANum(str) {
 function filter_list(l) {
     return l.filter(item => Number.isInteger(item))
 }
+
+function isValidWalk(walk) {
+  function count(val) {
+    return walk.filter(item => item == val).length
+  } 
+  
+  return walk.length == 10 && count('n') == count ('s') && count('w') == count('e')
+}
