@@ -100,3 +100,10 @@ function likes(names) {
     default: return `${names[0]}, ${names[1]} and ${names.slice(2).length} others like this`
   }
 }
+
+function highAndLow(numbers) {
+  const numbersArr = numbers.split(' ')
+  const max = Math.max(...numbersArr)
+  const min = Math.min(...numbersArr)
+  return `${max} ${min}`
+}
