@@ -71,39 +71,52 @@ function isItANum(str) {
 }
 
 function filter_list(l) {
-  return l.filter(item => Number.isInteger(item))
+  return l.filter((item) => Number.isInteger(item));
 }
 
 function isValidWalk(walk) {
   function count(val) {
-    return walk.filter(item => item == val).length
+    return walk.filter((item) => item == val).length;
   }
 
-  return walk.length == 10 && count('n') == count('s') && count('w') == count('e')
+  return (
+    walk.length == 10 && count("n") == count("s") && count("w") == count("e")
+  );
 }
 
 function solution(str) {
-  return str.split('').reverse().join('')
+  return str.split("").reverse().join("");
 }
 
 function disemvowel(str) {
-  const consonants = /[^aeiou]/gi
-  return str.match(consonants).join('')
+  const consonants = /[^aeiou]/gi;
+  return str.match(consonants).join("");
 }
 
 function likes(names) {
   switch (names.length) {
-    case 0: return "no one likes this"
-    case 1: return `${names[0]} likes this`
-    case 2: return `${names[0]} and ${names[1]} like this`
-    case 3: return `${names[0]}, ${names[1]} and ${names[2]} like this`
-    default: return `${names[0]}, ${names[1]} and ${names.slice(2).length} others like this`
+    case 0:
+      return "no one likes this";
+    case 1:
+      return `${names[0]} likes this`;
+    case 2:
+      return `${names[0]} and ${names[1]} like this`;
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${
+        names.slice(2).length
+      } others like this`;
   }
 }
 
 function highAndLow(numbers) {
-  const numbersArr = numbers.split(' ')
-  const max = Math.max(...numbersArr)
-  const min = Math.min(...numbersArr)
-  return `${max} ${min}`
+  const numbersArr = numbers.split(" ");
+  const max = Math.max(...numbersArr);
+  const min = Math.min(...numbersArr);
+  return `${max} ${min}`;
+}
+
+function removeChar(str) {
+  return str.slice(1, -1);
 }
