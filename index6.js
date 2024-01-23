@@ -22,3 +22,13 @@ function scrollingText(text) {
 function nthChar(words) {
   return words.map((word, i) => word[i]).join("");
 }
+
+function wordPattern(word) {
+  const wordProcessed = word.toLowerCase().split("");
+  const wordArray = Array.from(new Set(wordProcessed));
+  return wordProcessed
+    .map((letter) => {
+      return wordArray.indexOf(letter);
+    })
+    .join(".");
+}
