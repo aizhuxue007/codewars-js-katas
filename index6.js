@@ -33,6 +33,13 @@ function wordPattern(word) {
     .join(".");
 }
 
+// still don't understand a bit
 function catchSignChange(arr) {
   return arr.slice(1).filter((e, i) => e < 0 != arr[i] < 0).length;
+}
+
+function workNeeded(projectMinutes, freelancers) {
+  const freeLancersMinutes = freelancers.reduce((acc, curr) => acc += curr[0]*60 + curr[1] ,0)
+  const leftOver = projectMinutes - freeLancersMinutes
+  return leftOver > 0 ? `I need to work ${Math.floor(leftOver / 60)} hour(s) and ${leftOver % 60} minute(s)` : `Easy Money!`
 }
