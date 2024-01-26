@@ -43,3 +43,51 @@ function workNeeded(projectMinutes, freelancers) {
   const leftOver = projectMinutes - freeLancersMinutes
   return leftOver > 0 ? `I need to work ${Math.floor(leftOver / 60)} hour(s) and ${leftOver % 60} minute(s)` : `Easy Money!`
 }
+
+const rps = (p1, p2) => {
+    //   switch case p1 with return for different cases
+      switch (p1) {
+          case 'rock':
+            if (p2 == 'rock') {
+              return 'Draw!'
+            } else if (p2 == 'paper') {
+              return 'Player 2 won!'
+            } else {
+              return 'Player 1 won!'
+            }  
+            break;
+          case 'paper':
+            if (p2 == 'rock') {
+              return 'Player 1 won!'
+            } else if (p2 == 'paper') {
+              return 'Draw!'
+            } else {
+              return 'Player 2 won!'
+            }  
+            break;
+          case 'scissors':
+            if (p2 == 'rock') {
+              return 'Player 2 won!'
+            } else if (p2 == 'paper') {
+              return 'Player 1 won!'
+            } else {
+              return 'Draw!'
+            }  
+            break;
+          default:
+            break;
+      }
+    };
+
+/** better solution
+ * const rps = (p1, p2) => {
+  if (p1 === p2) return "Draw!";
+  var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+  if (p2 === rules[p1]) {
+    return "Player 1 won!";
+  }
+  else {
+    return "Player 2 won!";
+  }
+};
+ */
