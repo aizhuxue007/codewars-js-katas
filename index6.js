@@ -39,45 +39,52 @@ function catchSignChange(arr) {
 }
 
 function workNeeded(projectMinutes, freelancers) {
-  const freeLancersMinutes = freelancers.reduce((acc, curr) => acc += curr[0]*60 + curr[1] ,0)
-  const leftOver = projectMinutes - freeLancersMinutes
-  return leftOver > 0 ? `I need to work ${Math.floor(leftOver / 60)} hour(s) and ${leftOver % 60} minute(s)` : `Easy Money!`
+  const freeLancersMinutes = freelancers.reduce(
+    (acc, curr) => (acc += curr[0] * 60 + curr[1]),
+    0
+  );
+  const leftOver = projectMinutes - freeLancersMinutes;
+  return leftOver > 0
+    ? `I need to work ${Math.floor(leftOver / 60)} hour(s) and ${
+        leftOver % 60
+      } minute(s)`
+    : `Easy Money!`;
 }
 
 const rps = (p1, p2) => {
-    //   switch case p1 with return for different cases
-      switch (p1) {
-          case 'rock':
-            if (p2 == 'rock') {
-              return 'Draw!'
-            } else if (p2 == 'paper') {
-              return 'Player 2 won!'
-            } else {
-              return 'Player 1 won!'
-            }  
-            break;
-          case 'paper':
-            if (p2 == 'rock') {
-              return 'Player 1 won!'
-            } else if (p2 == 'paper') {
-              return 'Draw!'
-            } else {
-              return 'Player 2 won!'
-            }  
-            break;
-          case 'scissors':
-            if (p2 == 'rock') {
-              return 'Player 2 won!'
-            } else if (p2 == 'paper') {
-              return 'Player 1 won!'
-            } else {
-              return 'Draw!'
-            }  
-            break;
-          default:
-            break;
+  //   switch case p1 with return for different cases
+  switch (p1) {
+    case "rock":
+      if (p2 == "rock") {
+        return "Draw!";
+      } else if (p2 == "paper") {
+        return "Player 2 won!";
+      } else {
+        return "Player 1 won!";
       }
-    };
+      break;
+    case "paper":
+      if (p2 == "rock") {
+        return "Player 1 won!";
+      } else if (p2 == "paper") {
+        return "Draw!";
+      } else {
+        return "Player 2 won!";
+      }
+      break;
+    case "scissors":
+      if (p2 == "rock") {
+        return "Player 2 won!";
+      } else if (p2 == "paper") {
+        return "Player 1 won!";
+      } else {
+        return "Draw!";
+      }
+      break;
+    default:
+      break;
+  }
+};
 
 /** better solution
  * const rps = (p1, p2) => {
@@ -91,3 +98,16 @@ const rps = (p1, p2) => {
   }
 };
  */
+
+function getDivisorsCnt(n) {
+  let divisors = [];
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i == 0) {
+      divisors.push(i);
+      if (i !== Math.sqrt(n)) {
+        divisors.push(n / i); // not sure why
+      }
+    }
+  }
+  return divisors.length;
+}
