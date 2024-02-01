@@ -18,3 +18,11 @@ function factorial(n) {
   }
   return product;
 }
+
+function sumArray(array) {
+  return array != null && array.length > 1
+    ? array.reduce((acc, curr) => (acc += curr), 0) -
+        Math.max(...array) -
+        Math.min(...array)
+    : 0;
+}
