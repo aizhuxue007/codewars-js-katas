@@ -28,14 +28,20 @@ function sumArray(array) {
 }
 
 const phrases = [
-    'I love you',
-    'a little',
-    'a lot',
-    'passionately',
-    'madly',
-    'not at all',
-]
+  "I love you",
+  "a little",
+  "a lot",
+  "passionately",
+  "madly",
+  "not at all",
+];
 
 function howMuchILoveYou(n) {
-  return phrases[(n - 1) % phrases.length]
+  return phrases[(n - 1) % phrases.length];
+}
+
+function inAscOrder(arr) {
+  const copy = [...arr];
+  copy.sort((a, b) => a - b);
+  return copy.every((val, index) => val === arr[index]);
 }
