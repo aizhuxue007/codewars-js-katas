@@ -45,3 +45,12 @@ function inAscOrder(arr) {
   copy.sort((a, b) => a - b);
   return copy.every((val, index) => val === arr[index]);
 }
+
+const sumSquareEvenRootOdd = (ns) => {
+  return +(
+    ns
+      .map((n) => (n % 2 == 0 ? n ** 2 : n ** 0.5))
+      .reduce((acc, curr) => (acc += curr))
+      .toFixed(2)
+  );
+};
