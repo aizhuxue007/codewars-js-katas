@@ -47,10 +47,16 @@ function inAscOrder(arr) {
 }
 
 const sumSquareEvenRootOdd = (ns) => {
-  return +(
-    ns
-      .map((n) => (n % 2 == 0 ? n ** 2 : n ** 0.5))
-      .reduce((acc, curr) => (acc += curr))
-      .toFixed(2)
-  );
+  return +ns
+    .map((n) => (n % 2 == 0 ? n ** 2 : n ** 0.5))
+    .reduce((acc, curr) => (acc += curr))
+    .toFixed(2);
 };
+
+function vaporcode(string) {
+  return string
+    .replace(/\s/g, "")
+    .split("")
+    .map((c) => c.toUpperCase())
+    .join("  ");
+}
