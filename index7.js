@@ -60,3 +60,13 @@ function vaporcode(string) {
     .map((c) => c.toUpperCase())
     .join("  ");
 }
+
+function oddOnesOut(nums) {
+  const occurrences = nums.reduce((acc, val) => {
+    const string = val.toString();
+    acc[string] = acc[string] ? acc[string] + 1 : 1;
+    return acc;
+  }, {});
+
+  return nums.filter((v) => occurrences[v.toString()] % 2 == 0);
+}
