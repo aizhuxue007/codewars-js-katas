@@ -70,3 +70,10 @@ function oddOnesOut(nums) {
 
   return nums.filter((v) => occurrences[v.toString()] % 2 == 0);
 }
+
+function hexHash(code){
+  return code.split('').map(c => c.charCodeAt(0).toString(16)).reduce((acc, curr) => {
+    const n = curr.replace(/\D/g, '').split('').reduce((acc, curr) => acc += Number(curr), 0)
+    return acc += n
+  }, 0)
+}
