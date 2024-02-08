@@ -101,3 +101,15 @@ function exponent(a,b){
 function subt(a,b){
   return a - b
 }
+
+// need analysis
+function makeValley(arr) {
+  let l = []
+  let r = []
+  arr
+    .sort((a, b) => a - b)
+    .forEach((n, i) => {
+      i % 2 == 1 ? l.push(n) : r.unshift(n)
+  })
+  return [...l, ...r]
+}
