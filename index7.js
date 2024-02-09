@@ -22,8 +22,8 @@ function factorial(n) {
 function sumArray(array) {
   return array != null && array.length > 1
     ? array.reduce((acc, curr) => (acc += curr), 0) -
-        Math.max(...array) -
-        Math.min(...array)
+    Math.max(...array) -
+    Math.min(...array)
     : 0;
 }
 
@@ -71,34 +71,34 @@ function oddOnesOut(nums) {
   return nums.filter((v) => occurrences[v.toString()] % 2 == 0);
 }
 
-function hexHash(code){
+function hexHash(code) {
   return code.split('').map(c => c.charCodeAt(0).toString(16)).reduce((acc, curr) => {
     const n = curr.replace(/\D/g, '').split('').reduce((acc, curr) => acc += Number(curr), 0)
     return acc += n
   }, 0)
 }
 
-function add(a,b){
+function add(a, b) {
   return a + b
 }
 
-function divide(a,b){
+function divide(a, b) {
   return a / b
 }
 
-function multiply(a,b){
+function multiply(a, b) {
   return a * b
 }
 
-function mod(a,b){
+function mod(a, b) {
   return a % b
 }
- 
-function exponent(a,b){
+
+function exponent(a, b) {
   return a ** b
 }
-  
-function subt(a,b){
+
+function subt(a, b) {
   return a - b
 }
 
@@ -110,6 +110,11 @@ function makeValley(arr) {
     .sort((a, b) => a - b)
     .forEach((n, i) => {
       i % 2 == 1 ? l.push(n) : r.unshift(n)
-  })
+    })
   return [...l, ...r]
+}
+
+function strCount(str, letter) {
+  const regex = new RegExp(letter, "g");
+  return (str.match(regex) || []).length
 }
