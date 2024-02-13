@@ -22,3 +22,10 @@ function flipNumber(string) {
 
     return out.join('')
 }
+
+function flickSwitch(arr) {
+    let toggle = true
+    return arr.map(item => {
+        return (item === 'flick') ? toggle = !toggle : toggle
+    })
+}
