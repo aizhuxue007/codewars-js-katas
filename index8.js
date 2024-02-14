@@ -29,3 +29,5 @@ function flickSwitch(arr) {
         return (item === 'flick') ? toggle = !toggle : toggle
     })
 }
+
+const combineNames = (...names) => names.join(' ')
