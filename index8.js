@@ -31,3 +31,10 @@ function flickSwitch(arr) {
 }
 
 const combineNames = (...names) => names.join(' ')
+
+function removeSmallest(numbers) {
+    const copyNumbers = [...numbers]
+    const min = Math.min(...numbers)
+    copyNumbers.splice(copyNumbers.indexOf(min), 1)
+    return copyNumbers
+}
