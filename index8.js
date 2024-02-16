@@ -38,3 +38,12 @@ function removeSmallest(numbers) {
     copyNumbers.splice(copyNumbers.indexOf(min), 1)
     return copyNumbers
 }
+
+function solve(a, b) {
+    let aScore = 0, bScore = 0
+    for (let i = 0; i < 3; i++) {
+        (a[i] > b[i]) ? aScore++ : ((a[i] < b[i]) ? bScore++ : null)
+    }
+    if (aScore === bScore) return `${aScore}, ${bScore}: that looks like a "draw"! Rock on!`
+    return `${aScore}, ${bScore}: ${(aScore > bScore) ? 'Alice made "Kurt" proud!' : 'Bob made "Jeff" proud!'}`
+}
