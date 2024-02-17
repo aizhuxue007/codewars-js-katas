@@ -47,3 +47,11 @@ function solve(a, b) {
     if (aScore === bScore) return `${aScore}, ${bScore}: that looks like a "draw"! Rock on!`
     return `${aScore}, ${bScore}: ${(aScore > bScore) ? 'Alice made "Kurt" proud!' : 'Bob made "Jeff" proud!'}`
 }
+
+function monkeyCount(n) {
+  const result = []
+  for (let i = 1; i <= n; i++) {
+    result.push(i)
+  }
+  return result
+}
