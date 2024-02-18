@@ -118,3 +118,7 @@ function strCount(str, letter) {
   const regex = new RegExp(letter, "g");
   return (str.match(regex) || []).length
 }
+
+const stringToNumber = function(str){
+  return Number(str)
+}
