@@ -12,3 +12,13 @@ function pillars(numPill, dist, width) {
   if (numPill == 2) return dist * 100;
   return (numPill - 1) * dist * 100 + (numPill - 2) * width;
 }
+
+// https://www.codewars.com/kata/reviews/56d6e80ec6e24f2e15000043/groups/56d7733711262d6dbe000115
+function yearDays(year) {
+  const leap = `${year} has 366 days`;
+  const notLeap = `${year} has 365 days`;
+  if (year == 0) return leap;
+  if (year % 100 == 0) return year % 400 == 0 ? leap : notLeap;
+  if (year % 4 == 0) return leap;
+  return notLeap;
+}
