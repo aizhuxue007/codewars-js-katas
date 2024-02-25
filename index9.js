@@ -22,3 +22,9 @@ function yearDays(year) {
   if (year % 4 == 0) return leap;
   return notLeap;
 }
+
+const well = x => {
+  const goodCount = x.filter(i => i == 'good').length
+  return goodCount > 2 ? 'I smell a series!' : 
+         goodCount >= 1 ? 'Publish!': 'Fail!'
+}
