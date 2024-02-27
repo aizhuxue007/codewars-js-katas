@@ -25,6 +25,14 @@ function yearDays(year) {
 
 const well = x => {
   const goodCount = x.filter(i => i == 'good').length
-  return goodCount > 2 ? 'I smell a series!' : 
-         goodCount >= 1 ? 'Publish!': 'Fail!'
+  return goodCount > 2 ? 'I smell a series!' :
+    goodCount >= 1 ? 'Publish!' : 'Fail!'
+}
+
+function powersOfTwo(n) {
+  const result = []
+  for (let i = 0; i <= n; i++) {
+    result.push(2 ** i)
+  }
+  return result
 }
