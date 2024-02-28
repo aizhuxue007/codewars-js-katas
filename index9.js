@@ -36,3 +36,27 @@ function powersOfTwo(n) {
   }
   return result
 }
+
+function inverseStr(arr) {
+  return arr.map(c => {
+    if (c == c.toLowerCase()) {
+      return c.toUpperCase()
+    } else if (c == c.toUpperCase()) {
+      return c.toLowerCase()
+    } else return c
+  })
+}
+
+function reverseAndMirror(s1,s2) {
+  let part1 = inverseStr(s2.split('').reverse()).join('')
+  let part2 = inverseStr(s1.split('').reverse())
+  return `${part1}@@@${part2.join('')}${part2.reverse().join('')}`
+}
+
+/** clean solution 
+ * function reverseAndMirror(s1,s2) {
+  s1 = [...s1].map(x => x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()).join('')
+  s2 = [...s2].map(x => x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()).reverse().join('')
+  return `${s2}@@@${[...s1].reverse().join('')}${s1}`
+}
+ */
