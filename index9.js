@@ -60,3 +60,11 @@ function reverseAndMirror(s1,s2) {
   return `${s2}@@@${[...s1].reverse().join('')}${s1}`
 }
  */
+
+function findMultiples(int,limit) {
+  let result = []
+  for (let i = int; i <= limit; i += int) {
+    result.push(i)
+  }
+  return result
+}
