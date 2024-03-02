@@ -72,3 +72,15 @@ function findMultiples(int,limit) {
 function removeEveryOther(arr){
   return arr.filter((element, index) => index%2 == 0)
 }
+
+const naughtyOrNice = (data) => {
+  let naughtyMeter = 0
+  
+  for (month in data) {
+    for (day in data[month]) {
+      naughtyMeter += data[month][day] == 'Naughty' ? 1 : -1
+    }
+  }
+  
+  return naughtyMeter > 0 ? 'Naughty!' : 'Nice!'
+}
