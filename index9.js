@@ -75,12 +75,32 @@ function removeEveryOther(arr){
 
 const naughtyOrNice = (data) => {
   let naughtyMeter = 0
-  
   for (month in data) {
     for (day in data[month]) {
       naughtyMeter += data[month][day] == 'Naughty' ? 1 : -1
     }
   }
-  
   return naughtyMeter > 0 ? 'Naughty!' : 'Nice!'
 }
+
+// needs analysis
+function trilingualDemocracy(group) {
+  return String.fromCharCode(group.charCodeAt(0) ^ group.charCodeAt(1) ^ group.charCodeAt(2));
+}
+
+// my solution
+// function trilingualDemocracy(group) {
+//   const languages = {'D': 0, 'F': 0, 'I': 0, 'K': 0}
+//   group.split('').forEach(language => languages[language]++)
+  
+//   let answer 
+//   Object.keys(languages).forEach(l => {
+//     if (languages[l] == 3) {
+//       answer = l
+//     }
+//     if (languages[l] == 2) {
+//       answer = group.replaceAll(l, '')
+//     }
+//   })
+//   return answer ? answer : Object.keys(languages).filter(l => languages[l] == 0)[0]
+// }
