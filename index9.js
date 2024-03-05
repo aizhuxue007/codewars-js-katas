@@ -104,4 +104,3 @@ function trilingualDemocracy(group) {
 //   })
 //   return answer ? answer : Object.keys(languages).filter(l => languages[l] == 0)[0]
 // }
-
