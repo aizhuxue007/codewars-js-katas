@@ -9,3 +9,8 @@ function momentOfTimeInSpace(moment) {
     const space = momentArr.filter(c => !Number(c) ? true : false).length
     return [time < space, time == space, time > space]
 }
+
+function isTuringEquation(s) {
+    let [c, b, a] = s.split('').reverse().join('').split(/[^0-9]+/).map(s => Number(s))
+    return a + b === c
+}
