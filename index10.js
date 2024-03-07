@@ -14,3 +14,16 @@ function isTuringEquation(s) {
     let [c, b, a] = s.split('').reverse().join('').split(/[^0-9]+/).map(s => Number(s))
     return a + b === c
 }
+
+function didWeWin(plays) {
+    let score = 0
+
+    plays.forEach(play => {
+        let [yards, type] = play
+        if (type == 'turnover') return false
+        if (type == 'sack') score -= yards
+        if (type == 'run' || type == 'pass') score += yards
+    })
+
+    return score > 10
+}
