@@ -66,3 +66,35 @@ function stonePick(arr) {
 
   return pickaxes;
 }
+
+function decodeResistorColors(bands) {
+  const colorCodes = {
+    black: 0,
+    brown: 1,
+    red: 2,
+    orange: 3,
+    yellow: 4,
+    green: 5,
+    blue: 6,
+    violet: 7,
+    gray: 8,
+    white: 9,
+  };
+  let ohms = "";
+  let tolerance = 20;
+  let ohmsStr = "";
+  bands.split(" ").forEach((color, index) => {
+    if (index == 0 || index == 1) ohms += colorCodes[color];
+    if (index == 2) ohms = Number(ohms) * 10 ** colorCodes[color];
+    if (index == 3)
+      color === "gold"
+        ? (tolerance = 5)
+        : color === "silver"
+        ? (tolerance = 10)
+        : null;
+  });
+  if (ohms < 1000) ohmsStr = `${ohms}`;
+  else if (ohms >= 1000 && ohms < 1000000) ohmsStr = `${ohms / 1000}k`;
+  else ohmsStr = `${ohms / 1000000}M`;
+  return `${ohmsStr} ohms, ${tolerance}%`;
+}
