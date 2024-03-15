@@ -54,3 +54,9 @@ function reverseMiddle(array) {
     .slice(midIndex, array.length % 2 === 0 ? midIndex + 2 : midIndex + 3)
     .reverse();
 }
+
+function getHonorPath(honorScore, targetHonorScore) {
+  if (honorScore >= targetHonorScore) return {}
+  let scoreNeeded = targetHonorScore - honorScore
+  return {'1kyus': Math.floor(scoreNeeded/2), '2kyus': scoreNeeded%2}
+}
