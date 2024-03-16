@@ -58,5 +58,10 @@ function reverseMiddle(array) {
 function getHonorPath(honorScore, targetHonorScore) {
   if (honorScore >= targetHonorScore) return {}
   let scoreNeeded = targetHonorScore - honorScore
-  return {'1kyus': Math.floor(scoreNeeded/2), '2kyus': scoreNeeded%2}
+  return { '1kyus': Math.floor(scoreNeeded / 2), '2kyus': scoreNeeded % 2 }
+}
+
+function findNextSquare(sq) {
+  const sqrt = Math.sqrt(sq)
+  return Number.isInteger(sqrt) ? (sqrt + 1) ** 2 : -1
 }
