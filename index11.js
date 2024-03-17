@@ -65,3 +65,11 @@ function findNextSquare(sq) {
   const sqrt = Math.sqrt(sq)
   return Number.isInteger(sqrt) ? (sqrt + 1) ** 2 : -1
 }
+
+function spacey(array) {
+  let resultStr = ''
+  return array.map(word => {
+    resultStr += word
+    return resultStr
+  })
+}
