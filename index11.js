@@ -73,3 +73,16 @@ function spacey(array) {
     return resultStr
   })
 }
+
+function bulbMaze(maze) {
+  const even = maze.split('')
+  const odd = even.map(bulb => bulb === 'x' ? 'o' : 'x')
+  for (let i = 0; i < maze.length; i++) {
+    if (i % 2 === 0) {
+      if (even[i] === 'o') return false
+    } else {
+      if (odd[i] === 'o') return false
+    }
+  }
+  return true
+}
