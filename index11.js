@@ -86,3 +86,5 @@ function bulbMaze(maze) {
   }
   return true
 }
+
+const bulbMaze = (maze) => [].every.call(maze, (v, i) => v !== "ox"[i & 1])
