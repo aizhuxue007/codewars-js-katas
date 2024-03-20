@@ -6,3 +6,22 @@ function getSectionIdFromScroll(scrollY, sizes) {
     }
     return -1
 }
+
+function rounding(n, m) {
+    if (!(n >= 1 || n < 10 ** 9)) return null
+    if (!(m >= 3 || m < 10 ** 9)) return null
+    if (m / n === 2) return n
+    let remainder = n % m;
+    if (2 * remainder === m) {
+        return n;
+    }
+
+    let lowerMultiple = n - remainder;
+    let upperMultiple = (n - remainder) + m;
+
+    if ((n - lowerMultiple) < (upperMultiple - n)) {
+        return lowerMultiple;
+    } else {
+        return upperMultiple;
+    }
+}
