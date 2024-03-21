@@ -25,3 +25,11 @@ function rounding(n, m) {
         return upperMultiple;
     }
 }
+
+function SeriesSum(n) {
+    for (var s = 0, i = 1; i <= n; i++) {
+        s += 1 / (3 * i - 2)
+    }
+
+    return s.toFixed(2)
+}
