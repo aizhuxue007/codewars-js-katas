@@ -43,3 +43,48 @@ function List() {
     return result;
   };
 }
+
+function tacofy(word) {
+  const ingredients = {
+    a: "beef",
+    e: "beef",
+    i: "beef",
+    o: "beef",
+    u: "beef",
+    t: "tomato",
+    l: "lettuce",
+    c: "cheese",
+    g: "guacamole",
+    s: "salsa",
+  };
+  const result = ["shell"];
+  word
+    .toLowerCase()
+    .split("")
+    .forEach((c) => {
+      let ingredient = ingredients[c];
+      if (ingredient) result.push(ingredient);
+    });
+  result.push("shell");
+  return result;
+}
+
+// function tacofy(word) {
+//   var map = {
+//     t: "tomato",
+//     l: "lettuce",
+//     c: "cheese",
+//     g: "guacamole",
+//     s: "salsa",
+//     a: "beef",
+//     e: "beef",
+//     i: "beef",
+//     o: "beef",
+//     u: "beef",
+//   };
+//   return [
+//     "shell",
+//     ...[...word].map((x) => map[x.toLowerCase()]).filter((x) => x),
+//     "shell",
+//   ];
+// }
