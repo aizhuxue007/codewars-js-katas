@@ -15,3 +15,10 @@ function sortMyString(S) {
   });
   return evens + " " + odds;
 }
+
+function cookingTime(neededPower, minutes, seconds, power) {
+  const time = Math.ceil(
+    ((minutes * 60 + seconds) * parseInt(neededPower)) / parseInt(power)
+  );
+  return `${Math.floor(time / 60)} minutes ${time % 60} seconds`;
+}
