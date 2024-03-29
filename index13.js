@@ -22,3 +22,7 @@ function cookingTime(neededPower, minutes, seconds, power) {
   );
   return `${Math.floor(time / 60)} minutes ${time % 60} seconds`;
 }
+
+function cockroachSpeed(s) {
+  return Math.floor((s * 100000) / 3600);
+}
