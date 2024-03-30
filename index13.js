@@ -26,3 +26,13 @@ function cookingTime(neededPower, minutes, seconds, power) {
 function cockroachSpeed(s) {
   return Math.floor((s * 100000) / 3600);
 }
+
+/** Analysis and Rewrite from Memory */
+// function interweave(s1, s2) {
+//   let s = '', l = Math.max(s1.length, s2.length);
+//   for(let i = 0; i < l; i++) {
+//     if(s1[i]) s += s1[i];
+//     if(s2[i]) s += s2[i];
+//   }
+//   return s.replace(/\d/g,'').trim();
+// }
