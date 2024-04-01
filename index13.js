@@ -40,3 +40,11 @@ function cockroachSpeed(s) {
 function pofi(n) {
   return ["1", "i", "-1", "-i"][n % 4];
 }
+
+function matrix(array) {
+  return array.map((row, i) => {
+    const newRow = [...row];
+    newRow[i] = row[i] < 0 ? 0 : 1;
+    return newRow;
+  });
+}
