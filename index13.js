@@ -48,3 +48,82 @@ function matrix(array) {
     return newRow;
   });
 }
+
+class Color {
+  constructor() {
+    this.getName();
+  }
+
+  getName() {
+    throw new Error("You must implement this method");
+  }
+}
+
+class Black extends Color {
+  getName() {
+    return "black";
+  }
+}
+
+class White extends Color {
+  getName() {
+    return "white";
+  }
+}
+
+class Red extends Color {
+  getName() {
+    return "red";
+  }
+}
+
+class Green extends Color {
+  getName() {
+    return "green";
+  }
+}
+
+class Blue extends Color {
+  getName() {
+    return "blue";
+  }
+}
+
+class Magenta extends Color {
+  getName() {
+    return "magenta";
+  }
+}
+
+class Yellow extends Color {
+  getName() {
+    return "yellow";
+  }
+}
+
+class Cyan extends Color {
+  getName() {
+    return "cyan";
+  }
+}
+
+function hexColor(codes) {
+  const [red, green, blue] = codes.split(" ").map(Number);
+  const colors = [red ? red : 0, green ? green : 0, blue ? blue : 0];
+  const max = Math.max(...colors);
+
+  if (colors.length <= 1 || colors.filter((c) => c === 0).length === 3)
+    return new Black().getName();
+  if (new Set(colors).size === 1) return new White().getName();
+
+  const counts = colors.filter((color) => color === max).length;
+  if (counts > 1) {
+    if (red === blue) return new Magenta().getName();
+    if (green === red) return new Yellow().getName();
+    if (blue === green) return new Cyan().getName();
+  } else {
+    if (max === red) return new Red().getName();
+    if (max === green) return new Green().getName();
+    if (max === blue) return new Blue().getName();
+  }
+}
