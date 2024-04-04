@@ -13,3 +13,7 @@ function strong(n) {
     .reduce((acc, curr) => (acc += factorial(curr)), 0);
   return factorialSum === n ? "STRONG!!!!" : "Not Strong !!";
 }
+
+function stepThroughWith(s) {
+  return /(.)\1/.test(s);
+}
