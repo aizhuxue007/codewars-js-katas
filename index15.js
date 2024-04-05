@@ -17,3 +17,10 @@ function strong(n) {
 function stepThroughWith(s) {
   return /(.)\1/.test(s);
 }
+
+function XO(str) {
+  const strArr = str.toLowerCase().split("");
+  const xCount = strArr.filter((c) => c === "x").length;
+  const oCount = strArr.filter((c) => c === "o").length;
+  return xCount === oCount;
+}
