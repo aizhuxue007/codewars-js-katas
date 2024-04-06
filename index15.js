@@ -24,3 +24,7 @@ function XO(str) {
   const oCount = strArr.filter((c) => c === "o").length;
   return xCount === oCount;
 }
+
+function smash(words) {
+  return words.join(" ");
+}
