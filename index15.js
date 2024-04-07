@@ -28,3 +28,7 @@ function XO(str) {
 function smash(words) {
   return words.join(" ");
 }
+
+String.prototype.myNewMethod = function () {
+  return this.toUpperCase();
+};
