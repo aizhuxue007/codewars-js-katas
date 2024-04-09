@@ -44,3 +44,11 @@ function rpsls(pl1, pl2) {
   };
   return rules[pl1].includes(pl2) ? "Player 1 Won!" : "Player 2 Won!";
 }
+
+// Need study hard
+function cogRpm(cogs, n) {
+  const l = cogs.length;
+  const sFirst = n % 2 ? -1 : 1;
+  const sLast = (n - l) % 2 ? 1 : -1;
+  return [sFirst * (cogs[n] / cogs[0]), sLast * (cogs[n] / cogs[l - 1])];
+}
