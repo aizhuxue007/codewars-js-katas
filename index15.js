@@ -52,3 +52,9 @@ function cogRpm(cogs, n) {
   const sLast = (n - l) % 2 ? 1 : -1;
   return [sFirst * (cogs[n] / cogs[0]), sLast * (cogs[n] / cogs[l - 1])];
 }
+
+function replace(s) {
+  return s.replace(/[aeiou]/gi, "!");
+}
+
+questions.forEach((question) => (question.usersAnswer = null));
