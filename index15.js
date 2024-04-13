@@ -64,3 +64,11 @@ function openOrSenior(data) {
     age > 54 && handicap > 7 ? "Senior" : "Open"
   );
 }
+
+// Don't understand, kind of cheated...
+function titleToNumber(title) {
+  return title
+    .split("")
+    .map((c) => c.charCodeAt(0) - 64)
+    .reduce((x, y) => x * 26 * y);
+}
