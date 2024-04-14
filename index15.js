@@ -72,3 +72,11 @@ function titleToNumber(title) {
     .map((c) => c.charCodeAt(0) - 64)
     .reduce((x, y) => x * 26 * y);
 }
+
+function add(arr) {
+  return arr.map(
+    (n, i) =>
+      arr.slice(0, i === 0 ? 1 : i + 1).reduce((acc, curr) => acc + curr),
+    0
+  );
+}
