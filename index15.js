@@ -80,3 +80,14 @@ function add(arr) {
     0
   );
 }
+
+function encode(str, n) {
+  const nStr = String(n)
+    .split("")
+    .map((s) => Number(s));
+  return str.split("").map((c, i) => {
+    const index = (nStr.length + i) % nStr.length;
+    const charCode = c.charCodeAt(0) - 96;
+    return charCode + nStr[index];
+  });
+}
