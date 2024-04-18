@@ -9,3 +9,7 @@ function spinningRings(innerMax, outerMax) {
   }
   return moves;
 }
+
+function cantor(nestedList) {
+  return nestedList.map((r, i) => +!r[i]);
+}
