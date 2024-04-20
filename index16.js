@@ -25,3 +25,16 @@ function pairs(ar) {
   }
   return count;
 }
+
+function riders(stations) {
+  let totalDist = 0;
+  let riders = 1;
+  for (let i = 0; i <= stations.length; i++) {
+    if (totalDist + stations[i] > 100) {
+      riders++;
+      totalDist = 0;
+    }
+    totalDist += stations[i];
+  }
+  return riders;
+}
