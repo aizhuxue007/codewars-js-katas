@@ -38,3 +38,21 @@ function riders(stations) {
   }
   return riders;
 }
+
+function checkExam(array1, array2) {
+  let score = 0;
+  for (let i = 0; i < array1.length; i++) {
+    console.log(array1[i], array2[i]);
+    if (array1[i] === array2[i]) {
+      console.log("in if");
+      score += 4;
+    } else if (array2[i].trim() === "") {
+      console.log("in else if");
+      score += 0;
+    } else {
+      console.log("in else");
+      score -= 1;
+    }
+  }
+  return score < 0 ? 0 : score;
+}
