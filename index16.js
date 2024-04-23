@@ -64,3 +64,11 @@ function sortVowels(s) {
     .map((c) => (/^[aeiou]$/i.test(c) ? `|${c}` : `${c}|`))
     .join("\n");
 }
+
+function countBy(x, n) {
+  const result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(i * x);
+  }
+  return result;
+}
