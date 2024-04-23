@@ -56,3 +56,11 @@ function checkExam(array1, array2) {
   }
   return score < 0 ? 0 : score;
 }
+
+function sortVowels(s) {
+  if (typeof s !== "string") return "";
+  return s
+    .split("")
+    .map((c) => (/^[aeiou]$/i.test(c) ? `|${c}` : `${c}|`))
+    .join("\n");
+}
