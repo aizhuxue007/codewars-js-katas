@@ -76,3 +76,7 @@ function countBy(x, n) {
 function sumMix(x) {
   return x.reduce((acc, curr) => (acc += Number(curr)), 0);
 }
+
+function inverseSlice(items, a, b) {
+  return items.filter((_, i) => i < a || i >= b);
+}
