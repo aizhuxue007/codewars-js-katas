@@ -80,3 +80,8 @@ function sumMix(x) {
 function inverseSlice(items, a, b) {
   return items.filter((_, i) => i < a || i >= b);
 }
+
+function numCombo(arr, num) {
+  const sum = arr.reduce((a, b) => (a += b));
+  return arr.filter((x) => sum - x === num).length;
+}
