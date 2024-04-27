@@ -85,3 +85,15 @@ function numCombo(arr, num) {
   const sum = arr.reduce((a, b) => (a += b));
   return arr.filter((x) => sum - x === num).length;
 }
+
+function bestFriend(txt, a, b) {
+  const splitText = txt.split("");
+  const occurences = splitText.reduce((acc, curr, index) => {
+    if (curr === a) acc.push(index);
+    return acc;
+  }, []);
+  return (
+    occurences.filter((e, i) => splitText[e + 1] === b).length ===
+    occurences.length
+  );
+}
