@@ -5,3 +5,15 @@ function solve(str, k) {
     max = Math.max(max, +str.substring(i, n));
   }
 }
+
+function changeMe(moneyIn) {
+  const acceptedMoney = {
+    "£5": "20p ".repeat(25).trim(),
+    "£2": "20p ".repeat(10).trim(),
+    "£1": "20p ".repeat(5).trim(),
+    "50p": "20p 20p 10p",
+    "20p": "10p 10p",
+  };
+  if (!(moneyIn in acceptedMoney)) return moneyIn;
+  return acceptedMoney[moneyIn];
+}
