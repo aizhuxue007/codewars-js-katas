@@ -23,3 +23,11 @@ function ghostBusters(building) {
     return "You just wanted my autograph didn't you?";
   return building.replaceAll(" ", "");
 }
+
+function longestWord(stringOfWords) {
+  let largestWord = "";
+  stringOfWords.split(" ").forEach((word) => {
+    if (word.length >= largestWord.length) largestWord = word;
+  });
+  return largestWord;
+}
