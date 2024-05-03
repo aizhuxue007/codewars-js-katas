@@ -31,3 +31,7 @@ function longestWord(stringOfWords) {
   });
   return largestWord;
 }
+
+function pak(s) {
+  return s.trim().length === 0 ? "" : s.split(" ").join(" pak ");
+}
