@@ -35,3 +35,20 @@ function longestWord(stringOfWords) {
 function pak(s) {
   return s.trim().length === 0 ? "" : s.split(" ").join(" pak ");
 }
+
+function closedBracketWord(word) {
+  let check = true;
+  const halfLength = Math.floor(word.length / 2);
+  for (let i = 0; i <= halfLength; i++) {
+    let x = word.charCodeAt(i);
+    let y = word.charCodeAt(word.length - 1 - i);
+    if (x + y != 219) check = false;
+  }
+  return check;
+}
+
+/* clever solution
+function closedBracketWord(s) {
+  return s === s.split("").reverse().map(c => "abcdefghijklmnopqrstuvwxyz"["zyxwvutsrqponmlkjihgfedcba".indexOf(c)]).join("");
+}
+*/
