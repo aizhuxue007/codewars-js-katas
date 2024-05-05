@@ -52,3 +52,7 @@ function closedBracketWord(s) {
   return s === s.split("").reverse().map(c => "abcdefghijklmnopqrstuvwxyz"["zyxwvutsrqponmlkjihgfedcba".indexOf(c)]).join("");
 }
 */
+
+function sumOfMinimums(arr) {
+  return arr.reduce((acc, curr) => (acc += Math.min(...curr)), 0);
+}
