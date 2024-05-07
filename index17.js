@@ -56,3 +56,8 @@ function closedBracketWord(s) {
 function sumOfMinimums(arr) {
   return arr.reduce((acc, curr) => (acc += Math.min(...curr)), 0);
 }
+
+function lottery(str) {
+  const uniqueStr = str.match(/\d/g);
+  return uniqueStr ? [...new Set(uniqueStr)].join("") : "One more run!";
+}
