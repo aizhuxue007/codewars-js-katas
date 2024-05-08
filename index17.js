@@ -61,3 +61,11 @@ function lottery(str) {
   const uniqueStr = str.match(/\d/g);
   return uniqueStr ? [...new Set(uniqueStr)].join("") : "One more run!";
 }
+
+function fraction(a, b) {
+  const gcd = (x, y) => (y === 0 ? x : gcd(y, x % y));
+  const divisor = gcd(a, b);
+  const numer = a / divisor;
+  const denom = b / divisor;
+  return numer + denom;
+}
