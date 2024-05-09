@@ -69,3 +69,11 @@ function fraction(a, b) {
   const denom = b / divisor;
   return numer + denom;
 }
+
+function diff(a, b) {
+  const diff = [
+    ...a.filter((c) => !b.includes(c)),
+    ...b.filter((c) => !a.includes(c)),
+  ];
+  return [...new Set(diff)].sort();
+}
