@@ -77,3 +77,14 @@ function diff(a, b) {
   ];
   return [...new Set(diff)].sort();
 }
+
+function getSum(a, b) {
+  const max = Math.max(a, b);
+  const min = Math.min(a, b);
+  if (max === min) return min;
+  const result = [];
+  for (let i = min; i <= max; i++) {
+    result.push(i);
+  }
+  return result.reduce((acc, curr) => (acc += curr));
+}
