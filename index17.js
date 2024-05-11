@@ -88,3 +88,16 @@ function getSum(a, b) {
   }
   return result.reduce((acc, curr) => (acc += curr));
 }
+
+function dnaStrand(dna) {
+  const dnaComplements = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C",
+  };
+  return dna
+    .split("")
+    .map((c) => dnaComplements[c])
+    .join("");
+}
