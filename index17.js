@@ -101,3 +101,9 @@ function dnaStrand(dna) {
     .map((c) => dnaComplements[c])
     .join("");
 }
+
+function isIsogram(str) {
+  const strArr = str.toLowerCase().split("");
+  const setFromArr = new Set(strArr);
+  return strArr.length === [...setFromArr].length;
+}
