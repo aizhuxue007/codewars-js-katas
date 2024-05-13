@@ -107,3 +107,9 @@ function isIsogram(str) {
   const setFromArr = new Set(strArr);
   return strArr.length === [...setFromArr].length;
 }
+
+function* generator(a, b = 1) {
+  while (true) {
+    yield `${a} x ${b} = ${a * b++}`;
+  }
+}
