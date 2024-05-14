@@ -113,3 +113,7 @@ function* generator(a, b = 1) {
     yield `${a} x ${b} = ${a * b++}`;
   }
 }
+
+function middleMe(N, X, Y) {
+  return N % 2 ? X : Y.repeat(N / 2) + X + Y.repeat(N / 2);
+}
