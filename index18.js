@@ -14,3 +14,7 @@ function giveChange(amount) {
 function paperwork(n, m) {
   return n < 0 || m < 0 ? 0 : m * n;
 }
+
+function sortGiftCode(code) {
+  return code.split("").sort().join("");
+}
