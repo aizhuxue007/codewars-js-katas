@@ -35,3 +35,8 @@ function balancedNum(number) {
     .reduce((acc, curr) => (acc += Number(curr)), 0);
   return leftSum === rightSum ? "Balanced" : "Not Balanced";
 }
+
+function reverseSlice(str) {
+  const revStr = str.split("").reverse();
+  return revStr.map((e, i) => revStr.slice(i).join(""));
+}
