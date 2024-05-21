@@ -40,3 +40,5 @@ function reverseSlice(str) {
   const revStr = str.split("").reverse();
   return revStr.map((e, i) => revStr.slice(i).join(""));
 }
+
+// const gap = num => (num.toString(2).match(/10+(?=1)/g) || [' ']).sort().pop().length - 1;
