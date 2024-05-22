@@ -42,3 +42,17 @@ function reverseSlice(str) {
 }
 
 // const gap = num => (num.toString(2).match(/10+(?=1)/g) || [' ']).sort().pop().length - 1;
+
+function sumOfN(n) {
+  const result = [];
+  const array = [];
+  for (let i = 0; i <= Math.abs(n); i++) {
+    array.push(i);
+  }
+  for (let i = 0; i <= Math.abs(n); i++) {
+    result.push(
+      [...array.slice(0, i)].reduce((acc, curr) => (acc += curr), 0) + i
+    );
+  }
+  return n < 0 ? result.map((num) => num * -1) : result;
+}
