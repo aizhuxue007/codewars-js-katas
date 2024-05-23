@@ -56,3 +56,11 @@ function sumOfN(n) {
   }
   return n < 0 ? result.map((num) => num * -1) : result;
 }
+
+var countSheep = function (num) {
+  const result = "";
+  for (let i = 1; i <= num; i++) {
+    result += `${i} sheep...`;
+  }
+  return result;
+};
