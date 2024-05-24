@@ -64,3 +64,7 @@ var countSheep = function (num) {
   }
   return result;
 };
+
+function DNAtoRNA(dna) {
+  return dna.replaceAll("T", "U");
+}
