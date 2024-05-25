@@ -68,3 +68,7 @@ var countSheep = function (num) {
 function DNAtoRNA(dna) {
   return dna.replaceAll("T", "U");
 }
+
+function sumStr(a, b) {
+  return String(Number(a) + Number(b));
+}
