@@ -72,3 +72,5 @@ function DNAtoRNA(dna) {
 function sumStr(a, b) {
   return String(Number(a) + Number(b));
 }
+
+// const isReallyNaN = (val) => val != val;
