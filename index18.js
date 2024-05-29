@@ -79,3 +79,9 @@ function abbrevName(name) {
   const split = name.split(" ");
   return `${split[0][0].toUpperCase()}.${split[1][0].toUpperCase()}`;
 }
+
+function findAverage(array) {
+  return array.length
+    ? array.reduce((acc, curr) => (acc += curr)) / array.length
+    : 0;
+}
