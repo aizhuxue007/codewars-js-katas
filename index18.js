@@ -85,3 +85,18 @@ function findAverage(array) {
     ? array.reduce((acc, curr) => (acc += curr)) / array.length
     : 0;
 }
+
+function nearestSq(n) {
+  let sqrtN = Math.sqrt(n);
+
+  if (Number.isInteger(sqrtN)) {
+    return n;
+  } else {
+    sqrtN = Math.floor(sqrtN);
+  }
+
+  const leftSqr = Math.pow(sqrtN, 2);
+  const rightSqr = Math.pow(sqrtN + 1, 2);
+
+  return n - leftSqr <= rightSqr - n ? leftSqr : rightSqr;
+}
