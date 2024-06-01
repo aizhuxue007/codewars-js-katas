@@ -104,3 +104,12 @@ function nearestSq(n) {
 function mergeArrays(arr1, arr2) {
   return [...new Set(arr1.concat(arr2).sort((a, b) => a - b))];
 }
+
+class Circular {
+  constructor() {
+    this.value = "Hello World";
+    this.self = this;
+  }
+}
+
+const circular = new Circular();
