@@ -7,3 +7,11 @@ function differenceOfSquares(n) {
   }
   return sum ** 2 - squares;
 }
+
+function spot(s1, s2) {
+  const diffs = [];
+  s1.split("").forEach((e, i) => {
+    if (e !== s2[i]) diffs.push(i);
+  });
+  return diffs;
+}
