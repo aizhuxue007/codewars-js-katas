@@ -15,3 +15,15 @@ function spot(s1, s2) {
   });
   return diffs;
 }
+
+function divCon(x) {
+  return x.reduce(
+    (acc, curr) =>
+      typeof curr === "string" ? (acc -= Number(curr)) : (acc += curr),
+    0
+  );
+}
+
+// function divCon(x){
+//   return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
+// }
