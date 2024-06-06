@@ -27,3 +27,12 @@ function divCon(x) {
 // function divCon(x){
 //   return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
 // }
+
+function trigrams(phrase) {
+  if (phrase.length < 3) return "";
+  const trigram = [];
+  for (let i = 0; i <= phrase.length - 3; i++) {
+    trigram.push(phrase.substring(i, i + 3).replaceAll(" ", "_"));
+  }
+  return trigram.join(" ");
+}
