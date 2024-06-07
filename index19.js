@@ -36,3 +36,23 @@ function trigrams(phrase) {
   }
   return trigram.join(" ");
 }
+
+var isAnagram = function (test, original) {
+  if (test.length !== original.length) return false;
+  const originalArr = original.split("").map((c) => c.toLowerCase());
+  const testArr = test.split("").map((c) => c.toLowerCase());
+  for (let i = 0; i < test.length; i++) {
+    if (originalArr.includes(testArr[i])) {
+      originalArr.splice(originalArr.indexOf(testArr[i]), 1);
+    } else {
+      return false;
+    }
+  }
+  return true;
+};
+
+// var isAnagram = function(test, original) {
+//   var t = test.toLowerCase().split('').sort().join('');
+//   var o = original.toLowerCase().split('').sort().join('');
+//   return (t==o)?true:false;
+// };
