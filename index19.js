@@ -56,3 +56,11 @@ var isAnagram = function (test, original) {
 //   var o = original.toLowerCase().split('').sort().join('');
 //   return (t==o)?true:false;
 // };
+
+function rentalCarCost(d) {
+  const costPerDay = 40;
+  const total = costPerDay * d;
+  if (d >= 7) return total - 50;
+  else if (d >= 3) return total - 20;
+  else return total;
+}
