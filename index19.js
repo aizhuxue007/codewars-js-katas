@@ -64,3 +64,10 @@ function rentalCarCost(d) {
   else if (d >= 3) return total - 20;
   else return total;
 }
+
+function getSize(width, height, depth) {
+  return [
+    2 * (width * height + height * depth + width * depth),
+    width * height * depth,
+  ];
+}
