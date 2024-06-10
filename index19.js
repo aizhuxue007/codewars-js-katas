@@ -71,3 +71,7 @@ function getSize(width, height, depth) {
     width * height * depth,
   ];
 }
+
+function toNumberArray(stringarray) {
+  return stringarray.map((str) => Number(str));
+}
