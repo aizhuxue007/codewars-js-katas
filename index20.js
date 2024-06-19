@@ -16,3 +16,7 @@ function sentence(arrayOfObjects) {
   );
   return sortedArrObjects.map((obj) => obj[Object.keys(obj)[0]]).join(" ");
 }
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
