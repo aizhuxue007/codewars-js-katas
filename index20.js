@@ -20,3 +20,9 @@ function sentence(arrayOfObjects) {
 function makeUpperCase(str) {
   return str.toUpperCase();
 }
+
+// const getChar = String.fromCharCode;
+
+function getChar(c) {
+  return String.fromCharCode(c);
+}
