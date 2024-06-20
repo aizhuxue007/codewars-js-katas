@@ -26,3 +26,12 @@ function makeUpperCase(str) {
 function getChar(c) {
   return String.fromCharCode(c);
 }
+
+// const checkParity = (parity, bin) => +(parity === (bin.split('1').length % 2 ? 'odd' : 'even'))
+// https://www.codewars.com/kata/5df261342964c80028345a0a/solutions/javascript
+
+function checkParity(parity, bin) {
+  const binParity =
+    bin.split("").filter((c) => c === "1").length % 2 === 0 ? "even" : "odd";
+  return parity === binParity ? 0 : 1;
+}
