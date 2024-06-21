@@ -35,3 +35,7 @@ function checkParity(parity, bin) {
     bin.split("").filter((c) => c === "1").length % 2 === 0 ? "even" : "odd";
   return parity === binParity ? 0 : 1;
 }
+
+function testEven(n) {
+  return n % 2 === 0;
+}
