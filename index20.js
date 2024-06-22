@@ -39,3 +39,6 @@ function checkParity(parity, bin) {
 function testEven(n) {
   return n % 2 === 0;
 }
+
+const hoopCount = (n) =>
+  n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
