@@ -42,3 +42,10 @@ function testEven(n) {
 
 const hoopCount = (n) =>
   n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
+
+function onlyDuplicates(str) {
+  const regex = /(\w)(?=.*\1)/g;
+  const duplicates = [...new Set(str.match(regex))];
+  const answer = str.split("").filter((c) => duplicates.includes(c));
+  return answer ? answer.join("") : "";
+}
