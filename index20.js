@@ -49,3 +49,11 @@ function onlyDuplicates(str) {
   const answer = str.split("").filter((c) => duplicates.includes(c));
   return answer ? answer.join("") : "";
 }
+
+function tailSwap(arr) {
+  const xStr = arr[0].split(":");
+  const yStr = arr[1].split(":");
+  const resultX = [xStr[0], yStr[1]];
+  const resultY = [yStr[0], xStr[1]];
+  return [resultX.join(":"), resultY.join(":")];
+}
