@@ -57,3 +57,7 @@ function tailSwap(arr) {
   const resultY = [yStr[0], xStr[1]];
   return [resultX.join(":"), resultY.join(":")];
 }
+
+function getAge(inputString) {
+  return +inputString[0];
+}
