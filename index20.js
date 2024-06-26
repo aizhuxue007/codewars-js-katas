@@ -61,3 +61,13 @@ function tailSwap(arr) {
 function getAge(inputString) {
   return +inputString[0];
 }
+
+function mostLikely(prob1, prob2) {
+  const p1Arr = prob1.split(":");
+  const p1Num = +p1Arr[0];
+  const p1Den = +p1Arr[1];
+  const p2Arr = prob2.split(":");
+  const p2Num = +p2Arr[0];
+  const p2Den = +p2Arr[1];
+  return p1Num / p1Den >= p2Num / p2Den;
+}
