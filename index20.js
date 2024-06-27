@@ -71,3 +71,7 @@ function mostLikely(prob1, prob2) {
   const p2Den = +p2Arr[1];
   return p1Num / p1Den >= p2Num / p2Den;
 }
+
+function timeForMilkAndCookies(date) {
+  return date.getMonth() === 11 && date.getDate() === 24;
+}
