@@ -75,3 +75,8 @@ function mostLikely(prob1, prob2) {
 function timeForMilkAndCookies(date) {
   return date.getMonth() === 11 && date.getDate() === 24;
 }
+
+function equableTriangle(a, b, c) {
+  const s = (a + b + c) / 2;
+  return Math.sqrt(s * (s - a) * (s - b) * (s - c)) === a + b + c;
+}
