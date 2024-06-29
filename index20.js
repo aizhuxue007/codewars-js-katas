@@ -80,3 +80,10 @@ function equableTriangle(a, b, c) {
   const s = (a + b + c) / 2;
   return Math.sqrt(s * (s - a) * (s - b) * (s - c)) === a + b + c;
 }
+
+function sumDigits(number) {
+  return String(number)
+    .split("")
+    .filter((c) => !isNaN(parseInt(c)))
+    .reduce((acc, curr) => (acc += +curr), 0);
+}
