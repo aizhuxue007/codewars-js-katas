@@ -87,3 +87,24 @@ function sumDigits(number) {
     .filter((c) => !isNaN(parseInt(c)))
     .reduce((acc, curr) => (acc += +curr), 0);
 }
+
+function bearDollars(arr) {
+  let total = 0;
+  const hours = arr.map((invoice) => invoice[0]);
+  const rates = arr.map((invoice) => {
+    const proximity = invoice[1].toLowerCase();
+    if (proximity === "close friend") {
+      return 25;
+    } else if (proximity === "friend") {
+      return 50;
+    } else if (proximity === "acquaintance") {
+      return 100;
+    } else {
+      return 125;
+    }
+  });
+  for (let i = 0; i < hours.length; i++) {
+    total += hours[i] * rates[i];
+  }
+  return total;
+}
