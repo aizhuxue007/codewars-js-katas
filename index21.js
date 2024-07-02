@@ -5,3 +5,14 @@ function sumNoDuplicates(numList) {
   );
   return uniques.length < 1 ? 0 : uniques.reduce((acc, curr) => (acc += curr));
 }
+
+// function squeakyClean(arr) {
+//   return arr.filter(Boolean);
+// }
+
+function squeakyClean(arr) {
+  return arr.filter(
+    (item) =>
+      !(item === "" || item === 0 || item === null || item === undefined)
+  );
+}
