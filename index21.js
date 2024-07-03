@@ -16,3 +16,12 @@ function squeakyClean(arr) {
       !(item === "" || item === 0 || item === null || item === undefined)
   );
 }
+
+function generateShape(integer) {
+  let result = [];
+  const pluses = new Array(integer).fill("+").join("");
+  for (let i = 1; i <= integer; i++) {
+    result.push(pluses);
+  }
+  return result.join("\n");
+}
