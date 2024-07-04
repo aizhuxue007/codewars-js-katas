@@ -25,3 +25,7 @@ function generateShape(integer) {
   }
   return result.join("\n");
 }
+
+String.prototype.reverse = function () {
+  return this.split("").reverse().join("");
+};
