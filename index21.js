@@ -29,3 +29,7 @@ function generateShape(integer) {
 String.prototype.reverse = function () {
   return this.split("").reverse().join("");
 };
+
+function xor(a, b) {
+  return (a || b) && a !== b;
+}
