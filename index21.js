@@ -33,3 +33,8 @@ String.prototype.reverse = function () {
 function xor(a, b) {
   return (a || b) && a !== b;
 }
+
+function combat(health, damage) {
+  const newHealth = health - damage;
+  return newHealth > 0 ? newHealth : 0;
+}
