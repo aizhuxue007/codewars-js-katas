@@ -38,3 +38,20 @@ function combat(health, damage) {
   const newHealth = health - damage;
   return newHealth > 0 ? newHealth : 0;
 }
+
+function correct(string) {
+  return string
+    .split("")
+    .map((c) => {
+      if (c === "5") {
+        return "S";
+      } else if (c === "0") {
+        return "O";
+      } else if (c === "1") {
+        return "I";
+      } else {
+        return c;
+      }
+    })
+    .join("");
+}
