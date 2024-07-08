@@ -55,3 +55,5 @@ function correct(string) {
     })
     .join("");
 }
+
+Object.freeze(MrFreeze);
