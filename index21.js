@@ -57,3 +57,7 @@ function correct(string) {
 }
 
 Object.freeze(MrFreeze);
+
+function contamination(text, char) {
+  return char.repeat(text.length);
+}
