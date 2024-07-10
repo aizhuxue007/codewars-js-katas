@@ -61,3 +61,16 @@ Object.freeze(MrFreeze);
 function contamination(text, char) {
   return char.repeat(text.length);
 }
+
+function calculateTip(amount, rating) {
+  const ratings = {
+    terrible: 0,
+    poor: 0.05,
+    good: 0.1,
+    great: 0.15,
+    excellent: 0.2,
+  };
+  const percentage = ratings[rating.toLowerCase()];
+  if (percentage === 0) return 0;
+  return percentage ? Math.ceil(amount * percentage) : "Rating not recognised";
+}
