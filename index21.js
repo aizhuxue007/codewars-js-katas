@@ -74,3 +74,24 @@ function calculateTip(amount, rating) {
   if (percentage === 0) return 0;
   return percentage ? Math.ceil(amount * percentage) : "Rating not recognised";
 }
+
+function sizeToNumber(size) {
+  const sizes = {
+    xxxs: 30,
+    xxs: 32,
+    xs: 34,
+    s: 36,
+    m: 38,
+    l: 40,
+    xl: 42,
+    xxl: 44,
+    xxxl: 46,
+  };
+  if (sizes[size]) return sizes[size];
+  if (/^x+[sl]$/i.test(size)) {
+    return size[size.length - 1] === "s"
+      ? 38 - size.length * 2
+      : 38 + size.length * 2;
+  }
+  return null;
+}
