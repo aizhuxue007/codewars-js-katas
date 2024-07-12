@@ -95,3 +95,14 @@ function sizeToNumber(size) {
   }
   return null;
 }
+
+function isValid(formula) {
+  const includes = formula.includes.bind(formula);
+  const rules = [
+    () => !(includes(1) && includes(2)),
+    () => !(includes(3) && includes(4)),
+    () => (includes(5) && includes(6)) || (!includes(5) && !includes(6)),
+    () => includes(7) || includes(8),
+  ];
+  return rules.every((rule) => rule());
+}
