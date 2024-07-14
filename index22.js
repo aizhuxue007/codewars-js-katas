@@ -5,3 +5,7 @@ function reverseLetter(str) {
     .reverse()
     .join("");
 }
+
+function getLargerNumbers(a, b) {
+  return a.map((n, i) => Math.max(n, [b[i]]));
+}
