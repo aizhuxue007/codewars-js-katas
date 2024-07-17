@@ -18,3 +18,11 @@ const sequenceSum = (begin, end, step) => {
   }
   return sum;
 };
+
+// function sort(arr1, arr2) {
+//   const result = new Array(arr1.length);
+//   for (let i = 0; i < arr2.length; i++) {
+//     result[arr2[i]] = arr1[i];
+//   }
+//   return result;
+// }
