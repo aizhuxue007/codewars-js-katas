@@ -35,3 +35,11 @@ function countRedBeads(n) {
 function minMax(arr) {
   return [Math.min(...arr), Math.max(...arr)];
 }
+
+// const notesArray = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
+
+// function getNote(pitch) {
+//    let index = Math.round(12 * Math.log2(pitch / 440)) % 12;
+//    if (index < 0) index += 12;
+//    return notesArray[index];
+// }
