@@ -43,3 +43,13 @@ function minMax(arr) {
 //    if (index < 0) index += 12;
 //    return notesArray[index];
 // }
+
+function checkThreeAndTwo(array) {
+  let checkA = array.filter((c) => c === "a").length;
+  let checkB = array.filter((c) => c === "b").length;
+  let checkC = array.filter((c) => c === "c").length;
+  return (
+    (checkA === 3 || checkB === 3 || checkC === 3) &&
+    (checkA === 2 || checkB === 2 || checkC === 2)
+  );
+}
