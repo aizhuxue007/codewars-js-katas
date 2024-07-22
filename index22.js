@@ -53,3 +53,7 @@ function checkThreeAndTwo(array) {
     (checkA === 2 || checkB === 2 || checkC === 2)
   );
 }
+
+function problem(x) {
+  return typeof x === "string" ? "Error" : x * 50 + 6;
+}
