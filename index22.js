@@ -57,3 +57,13 @@ function checkThreeAndTwo(array) {
 function problem(x) {
   return typeof x === "string" ? "Error" : x * 50 + 6;
 }
+
+const nextTrafficColor = {
+  green: "yellow",
+  yellow: "red",
+  red: "green",
+};
+
+function updateLight(current) {
+  return nextTrafficColor[current];
+}
