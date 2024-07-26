@@ -76,3 +76,7 @@ function collinearity(x1, y1, x2, y2) {
 
 const website = [];
 websites.push("codewars");
+
+function shortenToDate(longDate) {
+  return longDate.split(",")[0];
+}
