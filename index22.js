@@ -80,3 +80,7 @@ websites.push("codewars");
 function shortenToDate(longDate) {
   return longDate.split(",")[0];
 }
+
+function twoDecimalPlaces(n) {
+  return +n.toFixed(2);
+}
