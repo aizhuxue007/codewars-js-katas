@@ -84,3 +84,16 @@ function shortenToDate(longDate) {
 function twoDecimalPlaces(n) {
   return +n.toFixed(2);
 }
+
+const days = {
+  1: "Sunday",
+  2: "Monday",
+  3: "Tuesday",
+  4: "Wednesday",
+  5: "Thursday",
+  6: "Friday",
+  7: "Saturday",
+};
+
+const whatday = (num) =>
+  days[num] || "Wrong, please enter a number between 1 and 7";
