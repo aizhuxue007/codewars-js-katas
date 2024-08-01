@@ -14,11 +14,11 @@ function _if(bool, func1, func2) {
 
 function expressionMatter(a, b, c) {
   const expressions = [
-    (() => a * (b + c))(),
-    (() => a * b * c)(),
-    (() => a + b * c)(),
-    (() => (a + b) * c)(),
-    (() => a + b + c)(),
+    a * (b + c),
+    a * b * c,
+    a + b * c,
+    (a + b) * c,
+    a + b + c,
   ];
   return Math.max(...expressions);
 }
