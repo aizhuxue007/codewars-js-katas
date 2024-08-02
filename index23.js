@@ -22,3 +22,19 @@ function expressionMatter(a, b, c) {
   ];
   return Math.max(...expressions);
 }
+
+class Guesser {
+  constructor(number, lives) {
+    this.number = number;
+    this.lives = lives;
+  }
+
+  guess(n) {
+    if (this.lives <= 0) throw new Error("Out of lives");
+    if (n !== this.number) {
+      --this.lives;
+      return false;
+    }
+    return true;
+  }
+}
