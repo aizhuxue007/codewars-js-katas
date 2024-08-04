@@ -44,3 +44,10 @@ function NameMe(first, last) {
   this.lastName = last;
   this.name = this.firstName + " " + this.lastName;
 }
+
+function swapValues() {
+  var args = Array.prototype.slice.call(arguments);
+  var temp = args[0][0];
+  args[0][0] = args[0][1];
+  args[0][1] = temp;
+}
