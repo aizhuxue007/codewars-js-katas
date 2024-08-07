@@ -53,3 +53,7 @@ function swapValues() {
 }
 
 // August 6 2024
+
+function remove(string) {
+  return string.replaceAll("!", "") + "!";
+}
