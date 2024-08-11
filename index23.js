@@ -80,3 +80,5 @@ function peopleWithAgeDrink(old) {
   if (old < 21) return "drink beer";
   if (old >= 21) return "drink whisky";
 }
+
+const include = (arr, item) => arr.includes(item);
