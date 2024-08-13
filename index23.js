@@ -82,3 +82,7 @@ function peopleWithAgeDrink(old) {
 }
 
 const include = (arr, item) => arr.includes(item);
+
+function spEng(sentence) {
+  return sentence.toLowerCase().includes("english");
+}
