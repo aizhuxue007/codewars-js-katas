@@ -86,3 +86,11 @@ const include = (arr, item) => arr.includes(item);
 function spEng(sentence) {
   return sentence.toLowerCase().includes("english");
 }
+
+function aliasGen(fName, lName) {
+  const fChar = fName[0].toUpperCase();
+  const lChar = lName[0].toUpperCase();
+  if (!/[a-zA-Z]/.test(fChar) || !/[a-zA-Z]/.test(lChar))
+    return "Your name must start with a letter from A - Z.";
+  return `${firstName[fChar]} ${surname[lChar]}`;
+}
