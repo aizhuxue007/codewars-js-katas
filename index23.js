@@ -94,3 +94,7 @@ function aliasGen(fName, lName) {
     return "Your name must start with a letter from A - Z.";
   return `${firstName[fChar]} ${surname[lChar]}`;
 }
+
+function ensureQuestion(s) {
+  return s[s.length - 1] === "?" ? s : s + "?";
+}
