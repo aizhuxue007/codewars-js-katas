@@ -6,3 +6,7 @@ function stringClean(s) {
 function mouthSize(animal) {
   return animal.toLowerCase() === "alligator" ? "small" : "wide";
 }
+
+function lowercaseCount(str) {
+  return str.match(/[a-z]/g)?.length ?? 0;
+}
