@@ -28,3 +28,10 @@ function getGrade(s1, s2, s3) {
   if (average >= 60) return "D";
   return "F";
 }
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  const blueLeft = blueStart - bluePulled;
+  const redLeft = redStart - redPulled;
+  const totalLeft = blueLeft + redLeft;
+  return blueLeft / totalLeft;
+}
