@@ -35,3 +35,8 @@ function guessBlue(blueStart, redStart, bluePulled, redPulled) {
   const totalLeft = blueLeft + redLeft;
   return blueLeft / totalLeft;
 }
+
+String.prototype.digit = function () {
+  const str = this.valueOf().match(/^\d$/g);
+  return str !== null ? str.length === 1 : false;
+};
