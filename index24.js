@@ -40,3 +40,11 @@ String.prototype.digit = function () {
   const str = this.valueOf().match(/^\d$/g);
   return str !== null ? str.length === 1 : false;
 };
+
+function getASCII(c) {
+  return c.charCodeAt(0);
+}
+
+function mango(quantity, price) {
+  return Math.floor(quantity / 3) * 2 * price + (quantity % 3) * price;
+}
