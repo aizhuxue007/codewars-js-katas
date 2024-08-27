@@ -56,3 +56,7 @@ function grader(score) {
   if (score >= 0.7) return "C";
   if (score >= 0.6) return "D";
 }
+
+function distinct(a) {
+  return [...new Set(a)];
+}
