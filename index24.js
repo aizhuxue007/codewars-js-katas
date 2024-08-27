@@ -60,3 +60,12 @@ function grader(score) {
 function distinct(a) {
   return [...new Set(a)];
 }
+
+function splitAndMerge(string, separator) {
+  return string
+    .split(" ")
+    .map((word) => {
+      return word.split("").join(separator);
+    })
+    .join(" ");
+}
