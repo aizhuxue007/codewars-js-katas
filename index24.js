@@ -69,3 +69,11 @@ function splitAndMerge(string, separator) {
     })
     .join(" ");
 }
+
+function cookie(x) {
+  let whoAte = "";
+  if (typeof x === "string") whoAte = "Zach";
+  if (typeof x === "number") whoAte = "Monica";
+  if (whoAte === "") whoAte = "the dog";
+  return `Who ate the last cookie? It was ${whoAte}!`;
+}
