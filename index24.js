@@ -77,3 +77,8 @@ function cookie(x) {
   if (whoAte === "") whoAte = "the dog";
   return `Who ate the last cookie? It was ${whoAte}!`;
 }
+
+function periodIsLate(last, today, cycleLength) {
+  const days = (today - last) / (24 * 60 * 60 * 1000);
+  return days > cycleLength;
+}
