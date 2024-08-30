@@ -78,6 +78,10 @@ function cookie(x) {
   return `Who ate the last cookie? It was ${whoAte}!`;
 }
 
+function circleArea(circle) {
+  return Math.PI * circle.radius ** 2;
+}
+
 function periodIsLate(last, today, cycleLength) {
   const days = (today - last) / (24 * 60 * 60 * 1000);
   return days > cycleLength;
