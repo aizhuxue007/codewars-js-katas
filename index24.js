@@ -86,3 +86,7 @@ function periodIsLate(last, today, cycleLength) {
   const days = (today - last) / (24 * 60 * 60 * 1000);
   return days > cycleLength;
 }
+
+function reverse(string) {
+  return string.split(" ").reverse().join(" ");
+}
