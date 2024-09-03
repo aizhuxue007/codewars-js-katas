@@ -7,3 +7,8 @@ function firstNonConsecutive(arr) {
   }
   return null;
 }
+
+function validateCode(code) {
+  const str = String(code)[0];
+  return str === "1" || str === "2" || str === "3";
+}
