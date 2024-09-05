@@ -20,3 +20,12 @@ function twoSort(s) {
 function simpleMultiplication(number) {
   return number % 2 === 0 ? number * 8 : number * 9;
 }
+
+function billboard(name, price = 30) {
+  const length = name.split("").length;
+  let result = 0;
+  for (let i = 0; i < length; i++) {
+    result += price;
+  }
+  return result;
+}
