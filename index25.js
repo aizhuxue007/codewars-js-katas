@@ -29,3 +29,7 @@ function billboard(name, price = 30) {
   }
   return result;
 }
+
+function main(verb, noun) {
+  return verb + noun;
+}
