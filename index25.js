@@ -63,3 +63,7 @@ function position(letter) {
   const position = alphabet.indexOf(letter) + 1;
   return `Position of alphabet: ${position}`;
 }
+
+function printArray(array) {
+  return array.join(",");
+}
