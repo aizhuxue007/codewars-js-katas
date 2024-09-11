@@ -67,3 +67,11 @@ function position(letter) {
 function printArray(array) {
   return array.join(",");
 }
+
+function noBoringZeros(n) {
+  const strArr = String(n).split("");
+  for (let i = strArr.length - 1; strArr[i] === "0"; i--) {
+    strArr.pop();
+  }
+  return +strArr.join("");
+}
