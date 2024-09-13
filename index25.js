@@ -79,3 +79,7 @@ function noBoringZeros(n) {
 const areaOrPerimeter = function (l, w) {
   return l === w ? l * w : 2 * (l + w);
 };
+
+function reverseList(list) {
+  return list.reverse();
+}
