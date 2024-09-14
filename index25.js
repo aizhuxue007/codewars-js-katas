@@ -83,3 +83,7 @@ const areaOrPerimeter = function (l, w) {
 function reverseList(list) {
   return list.reverse();
 }
+
+function toBinary(n) {
+  return +n.toString(2);
+}
