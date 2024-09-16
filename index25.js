@@ -87,3 +87,8 @@ function reverseList(list) {
 function toBinary(n) {
   return +n.toString(2);
 }
+
+function array(string) {
+  const split = string.split(",");
+  return split.length < 3 ? null : split.slice(1, split.length - 1).join(" ");
+}
