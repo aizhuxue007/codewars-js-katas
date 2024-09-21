@@ -13,3 +13,8 @@ var min = function (list) {
 var max = function (list) {
   return Math.max(...list);
 };
+
+function enough(cap, on, wait) {
+  const result = on + wait - cap;
+  return result > 0 ? result : 0;
+}
