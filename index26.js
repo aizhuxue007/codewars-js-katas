@@ -18,3 +18,7 @@ function enough(cap, on, wait) {
   const result = on + wait - cap;
   return result > 0 ? result : 0;
 }
+
+function sayHello(name) {
+  return `Hello, ${name}`;
+}
