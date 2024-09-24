@@ -22,3 +22,7 @@ function enough(cap, on, wait) {
 function sayHello(name) {
   return `Hello, ${name}`;
 }
+
+function stringToArray(string) {
+  return string.split(" ");
+}
