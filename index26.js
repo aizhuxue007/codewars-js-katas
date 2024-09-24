@@ -26,3 +26,7 @@ function sayHello(name) {
 function stringToArray(string) {
   return string.split(" ");
 }
+
+function all(arr, fun) {
+  return arr.every(fun);
+}
