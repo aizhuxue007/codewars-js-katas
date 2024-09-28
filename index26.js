@@ -65,3 +65,10 @@ solution = (molarMass1, molarMass2, givenMass1, givenMass2, volume, temp) => {
     volume
   );
 };
+
+const quarterOf = (month) => {
+  if (month < 4) return 1;
+  if (month <= 6) return 2;
+  if (month <= 9) return 3;
+  if (month <= 12) return 4;
+};
