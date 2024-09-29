@@ -72,3 +72,8 @@ const quarterOf = (month) => {
   if (month <= 9) return 3;
   if (month <= 12) return 4;
 };
+
+function isPalindrome(x) {
+  const xLower = x.toLowerCase();
+  return xLower === xLower.split("").reverse().join("");
+}
