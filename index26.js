@@ -84,3 +84,12 @@ function finalGrade(exam, projects) {
   if (exam > 50 && projects >= 2) return 75;
   return 0;
 }
+
+function getRealFloor(n) {
+  if (n === 1) return 0;
+  if (n === 0) return 0;
+  if (n === 13) return 12;
+  if (n > 13) return n - 2;
+  if (n < 0) return n;
+  return n - 1;
+}
