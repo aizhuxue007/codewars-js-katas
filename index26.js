@@ -93,3 +93,7 @@ function getRealFloor(n) {
   if (n < 0) return n;
   return n - 1;
 }
+
+function multipleOfIndex(array) {
+  return array.filter((e, i) => e % i === 0 || e === 0);
+}
