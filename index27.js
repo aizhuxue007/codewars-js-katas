@@ -4,3 +4,7 @@ function shortcut(string) {
     .filter((c) => !"aeiou".includes(c))
     .join("");
 }
+
+function opposite(number) {
+  return -1 * number;
+}
