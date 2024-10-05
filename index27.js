@@ -8,3 +8,7 @@ function shortcut(string) {
 function opposite(number) {
   return -1 * number;
 }
+
+function nameShuffler(str) {
+  return str.split(" ").reverse().join(" ");
+}
