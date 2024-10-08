@@ -20,3 +20,7 @@ function joinStrings(string1, string2) {
 function twiceAsOld(dadYearsOld, sonYearsOld) {
   return Math.abs(dadYearsOld - sonYearsOld * 2);
 }
+
+function greet() {
+  return "hello world!";
+}
