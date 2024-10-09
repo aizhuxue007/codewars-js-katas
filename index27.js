@@ -24,3 +24,8 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 function greet() {
   return "hello world!";
 }
+
+function unusualFive() {
+  const arr = ["", "", "", "", ""];
+  return arr.length;
+}
