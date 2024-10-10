@@ -29,3 +29,7 @@ function unusualFive() {
   const arr = ["", "", "", "", ""];
   return arr.length;
 }
+
+function howManySmaller(arr, n) {
+  return arr.filter((dec) => +dec.toFixed(2) < n).length;
+}
