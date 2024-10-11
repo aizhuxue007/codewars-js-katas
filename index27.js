@@ -33,3 +33,9 @@ function unusualFive() {
 function howManySmaller(arr, n) {
   return arr.filter((dec) => +dec.toFixed(2) < n).length;
 }
+
+function chromosomeCheck(sperm) {
+  return sperm.split("")[1] === "Y"
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+}
