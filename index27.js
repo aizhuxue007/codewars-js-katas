@@ -39,3 +39,9 @@ function chromosomeCheck(sperm) {
     ? "Congratulations! You're going to have a son."
     : "Congratulations! You're going to have a daughter.";
 }
+
+function chromosomeCheckBetter(sperm) {
+  return `Congratulations! You're going to have a ${
+    sperm === "XY" ? "son" : "daughter"
+  }.`;
+}
