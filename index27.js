@@ -49,3 +49,7 @@ function chromosomeCheckBetter(sperm) {
 function litres(time) {
   return Math.floor(time * 0.5);
 }
+
+function checkForFactor(base, factor) {
+  return base % factor === 0;
+}
