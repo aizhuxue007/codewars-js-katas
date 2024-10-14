@@ -53,3 +53,5 @@ function litres(time) {
 function checkForFactor(base, factor) {
   return base % factor === 0;
 }
+
+const setAlarm = (employed, vacation) => employed && !vacation;
