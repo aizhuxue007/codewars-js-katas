@@ -55,3 +55,5 @@ function checkForFactor(base, factor) {
 }
 
 const setAlarm = (employed, vacation) => employed && !vacation;
+
+const century = (year) => Math.ceil(year / 100);
