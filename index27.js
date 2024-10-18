@@ -61,3 +61,7 @@ const century = (year) => Math.ceil(year / 100);
 const noSpace = (x) => x.split(" ").join("");
 
 const square = (x) => x ** 2;
+
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
