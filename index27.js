@@ -90,3 +90,7 @@ function switchItUp(number) {
       return "Nine";
   }
 }
+
+function plural(n) {
+  return !(n === 1);
+}
