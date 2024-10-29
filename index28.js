@@ -46,3 +46,9 @@ function gooseFilter(birds) {
 
   return birds.filter((bird) => !geese.includes(bird));
 }
+
+class Cat extends Animal {
+  speak() {
+    return `${this.name} meows.`;
+  }
+}
