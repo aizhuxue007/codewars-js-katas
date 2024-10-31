@@ -58,3 +58,7 @@ function describeAge(age) {
     age <= 12 ? "kid" : age <= 17 ? "teenager" : age <= 64 ? "adult" : "elderly"
   }`;
 }
+
+function saleHotdogs(n) {
+  return (n < 5 ? 100 : n < 10 ? 95 : 90) * n;
+}
