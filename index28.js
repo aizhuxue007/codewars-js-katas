@@ -62,3 +62,8 @@ function describeAge(age) {
 function saleHotdogs(n) {
   return (n < 5 ? 100 : n < 10 ? 95 : 90) * n;
 }
+
+function helloWorld() {
+  const str = "Hello World!";
+  console.log(str);
+}
