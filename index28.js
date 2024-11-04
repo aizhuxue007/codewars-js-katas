@@ -75,3 +75,7 @@ function multiTable(number) {
   }
   return table.substring(0, table.length - 1);
 }
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
