@@ -79,3 +79,9 @@ function multiTable(number) {
 function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
+
+var websites = [];
+
+for (let i = 0; i < 1000; i++) {
+  websites.push("codewars");
+}
