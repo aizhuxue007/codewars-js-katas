@@ -89,3 +89,7 @@ for (let i = 0; i < 1000; i++) {
 function howManyLightsabersDoYouOwn(name) {
   return name === "Zach" ? 18 : 0;
 }
+
+var Ball = function (ballType) {
+  this.ballType = ballType === "super" ? "super" : "regular";
+};
