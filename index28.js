@@ -93,3 +93,11 @@ function howManyLightsabersDoYouOwn(name) {
 var Ball = function (ballType) {
   this.ballType = ballType === "super" ? "super" : "regular";
 };
+
+function first(arr, n) {
+  return n === 0
+    ? []
+    : n === undefined
+    ? [arr[0]]
+    : arr.filter((e, i) => i < n);
+}
