@@ -15,3 +15,12 @@ function uefaEuro2016(teams, scores) {
       : `${scores[0] > scores[1] ? teams[0] : teams[1]} won!`;
   return `At match ${teams[0]} - ${teams[1]}, ${result}`;
 }
+
+function giveMeFive(obj) {
+  const array = [];
+  for (let key in obj) {
+    if (key.length === 5) array.push(key);
+    if (obj[key].length === 5) array.push(obj[key]);
+  }
+  return array;
+}
