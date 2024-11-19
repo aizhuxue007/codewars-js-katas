@@ -29,3 +29,21 @@ function addFive(num) {
   var total = num + 5;
   return total;
 }
+
+var rooms = {
+  room1: {
+    name: "hotdog",
+    description: "funtimes",
+    completed: false,
+  },
+  room2: {
+    name: "hotdog2",
+    description: "funtimes1",
+    completed: false,
+  },
+  room3: {
+    name: "hotdog3",
+    description: "funtimes2",
+    completed: true,
+  },
+};
