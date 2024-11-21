@@ -47,3 +47,7 @@ var rooms = {
     completed: true,
   },
 };
+
+function none(arr, fun) {
+  return arr.every((e) => !fun(e));
+}
