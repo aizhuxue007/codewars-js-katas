@@ -102,3 +102,7 @@ function equal5() {
     b = v4; //set number value to b
   return a % b;
 }
+
+function check(a, x) {
+  return a.includes(x);
+}
