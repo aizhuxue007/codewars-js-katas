@@ -21,3 +21,7 @@ function calculator(a, b, sign) {
       return "unknown value";
   }
 }
+
+function solution(nums) {
+  return nums ? nums.sort((a, b) => a - b) : [];
+}
