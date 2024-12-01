@@ -25,3 +25,7 @@ function calculator(a, b, sign) {
 function solution(nums) {
   return nums ? nums.sort((a, b) => a - b) : [];
 }
+
+var ArrowFunc = function (arr) {
+  return arr.map((n) => String.fromCharCode(n)).join("");
+};
