@@ -29,3 +29,8 @@ function solution(nums) {
 var ArrowFunc = function (arr) {
   return arr.map((n) => String.fromCharCode(n)).join("");
 };
+
+function parseF(s) {
+  if (s === 0 || s === "0") return +0;
+  return parseFloat(typeof s === "string" ? s.replace(",", ".") : s) || null;
+}
