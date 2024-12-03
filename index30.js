@@ -34,3 +34,19 @@ function parseF(s) {
   if (s === 0 || s === "0") return +0;
   return parseFloat(typeof s === "string" ? s.replace(",", ".") : s) || null;
 }
+
+function automorphic(n) {
+  const squareStringReversed = String(n ** 2)
+    .split("")
+    .reverse();
+  const nDigitsReversed = String(n).split("").reverse();
+  return nDigitsReversed.every((n, i) => n === squareStringReversed[i])
+    ? "Automorphic"
+    : "Not!!";
+}
+
+/**
+ * Better solution
+ */
+const automorphic2 = (n) =>
+  String(n * n).endsWith(String(n)) ? "Automorphic" : "Not!!";
