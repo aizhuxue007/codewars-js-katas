@@ -50,3 +50,10 @@ function automorphic(n) {
  */
 const automorphic2 = (n) =>
   String(n * n).endsWith(String(n)) ? "Automorphic" : "Not!!";
+
+const adjacentElementsProduct = (array) => {
+  const result = array.slice(0, array.length - 1).map((n, i) => {
+    if (i < array.length) return n * array[i + 1];
+  });
+  return Math.max(...result);
+};
