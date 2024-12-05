@@ -57,3 +57,11 @@ const adjacentElementsProduct = (array) => {
   });
   return Math.max(...result);
 };
+
+function nextId(ids) {
+  const uniqueIds = [...new Set(ids.sort())];
+  for (let i = 0; i < uniqueIds.length; i++) {
+    if (!uniqueIds.includes(i)) return i;
+  }
+  return uniqueIds.length;
+}
