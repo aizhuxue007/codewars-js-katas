@@ -65,3 +65,7 @@ function nextId(ids) {
   }
   return uniqueIds.length;
 }
+
+function SafeInteger(n) {
+  return Number.isSafeInteger(n);
+}
