@@ -75,3 +75,7 @@ function playerRankUp(points) {
     ? "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up."
     : false;
 }
+
+function pointsPer48(ppg, mpg) {
+  return ppg !== 0 && mpg !== 0 ? Number(((ppg / mpg) * 48).toFixed(1)) : 0;
+}
