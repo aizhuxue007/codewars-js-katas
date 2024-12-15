@@ -12,3 +12,12 @@ function blackAndWhite(arr) {
     arr.indexOf(5) !== -1 && arr.indexOf(13) !== -1 ? "black" : "white"
   } array`;
 }
+
+function power(x, y) {
+  if (y === 0) return 1;
+  let result = 1;
+  for (let i = 1; i <= y; i++) {
+    result *= x;
+  }
+  return result;
+}
