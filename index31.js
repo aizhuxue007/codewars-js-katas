@@ -23,3 +23,7 @@ function power(x, y) {
 }
 
 // x**y;
+
+function any(arr, fun) {
+  return arr.some(fun);
+}
