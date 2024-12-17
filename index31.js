@@ -27,3 +27,8 @@ function power(x, y) {
 function any(arr, fun) {
   return arr.some(fun);
 }
+
+function animal(obj) {
+  const { name, legs, color } = obj;
+  return `This ${color} ${name} has ${legs} legs.`;
+}
