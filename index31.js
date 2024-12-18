@@ -32,3 +32,8 @@ function animal(obj) {
   const { name, legs, color } = obj;
   return `This ${color} ${name} has ${legs} legs.`;
 }
+
+function circleCircumference(circle) {
+  const result = 2 * Math.PI * circle.radius;
+  return typeof result === "number" ? Number(result.toFixed(6)) : 0;
+}
