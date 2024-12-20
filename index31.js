@@ -37,3 +37,9 @@ function circleCircumference(circle) {
   const result = 2 * Math.PI * circle.radius;
   return typeof result === "number" ? Number(result.toFixed(6)) : 0;
 }
+
+function apple(x) {
+  return x ** 2 > 1000
+    ? "It's hotter than the sun!!"
+    : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
