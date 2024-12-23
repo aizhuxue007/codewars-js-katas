@@ -67,3 +67,8 @@ function dutyFree(normPrice, discount, hol) {
   const savePerBottle = normPrice * (discount / 100);
   return Math.floor(hol / savePerBottle);
 }
+
+function trueOrFalse(val) {
+  if (!val) return "false";
+  else return "true";
+}
