@@ -81,3 +81,5 @@ function solution(number) {
   }
   return sum;
 }
+
+const a = [];
