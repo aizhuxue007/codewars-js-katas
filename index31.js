@@ -83,3 +83,7 @@ function solution(number) {
 }
 
 const a = [];
+
+function add(a, b) {
+  return a == b;
+}
