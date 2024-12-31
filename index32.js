@@ -9,8 +9,8 @@ function colorOf(r, g, b) {
 }
 
 function roundIt(n) {
-  const nArray = String(n).split(".");
-  if (nArray[0].length < nArray[1].length) return Math.ceil(n);
-  if (nArray[0].length > nArray[1].length) return Math.floor(n);
+  const [a, b] = String(n).split(".");
+  if (a.length < b.length) return Math.ceil(n);
+  if (a.length > b.length) return Math.floor(n);
   return Math.round(n);
 }
