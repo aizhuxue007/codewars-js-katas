@@ -14,3 +14,10 @@ function roundIt(n) {
   if (a.length > b.length) return Math.floor(n);
   return Math.round(n);
 }
+
+function descendingOrder(n) {
+  return +String(n)
+    .split("")
+    .sort((a, b) => b - a)
+    .join("");
+}
