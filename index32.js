@@ -30,3 +30,9 @@ const getMiddle = (s) =>
 function friend(friends) {
   return friends.filter((person) => person.length === 4);
 }
+
+function cutCube(volume, n) {
+  return Number.isInteger(Math.cbrt(n))
+    ? Number.isInteger(Math.cbrt(volume / n))
+    : false;
+}
