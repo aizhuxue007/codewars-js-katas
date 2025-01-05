@@ -36,3 +36,11 @@ function cutCube(volume, n) {
     ? Number.isInteger(Math.cbrt(volume / n))
     : false;
 }
+
+const filterLetters = (arr) =>
+  arr.split("").filter((c) => "abcdefghijklmnopqrstuvwxyz");
+
+function longest(s1, s2) {
+  const soup = filterLetters(s1).concat(filterLetters(s2));
+  return [...new Set(soup)].sort().join("");
+}
