@@ -44,3 +44,11 @@ function longest(s1, s2) {
   const soup = filterLetters(s1).concat(filterLetters(s2));
   return [...new Set(soup)].sort().join("");
 }
+
+function solution(str, ending) {
+  return ending
+    .split("")
+    .every((c, i) => str.split("")[str.length - ending.length + i] === c);
+}
+
+// str.endsWith(ending);
