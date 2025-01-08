@@ -52,3 +52,9 @@ function solution(str, ending) {
 }
 
 // str.endsWith(ending);
+
+function printerError(s) {
+  return `${s.split("").filter((c) => !"abcdefghijklm".includes(c)).length}/${
+    s.length
+  }`;
+}
