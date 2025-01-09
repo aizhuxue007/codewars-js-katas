@@ -58,3 +58,7 @@ function printerError(s) {
     s.length
   }`;
 }
+
+function addBinary(a, b) {
+  return (a + b).toString(2);
+}
