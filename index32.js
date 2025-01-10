@@ -62,3 +62,13 @@ function printerError(s) {
 function addBinary(a, b) {
   return (a + b).toString(2);
 }
+
+function nbYear(p0, percent, aug, p) {
+  let inhabitants = p0;
+  let years = 1;
+  for (let i = 1; inhabitants < p; i++) {
+    inhabitants += Math.floor(inhabitants * (percent / 100) + aug);
+    years = i;
+  }
+  return years;
+}
