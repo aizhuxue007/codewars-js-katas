@@ -72,3 +72,7 @@ function nbYear(p0, percent, aug, p) {
   }
   return years;
 }
+
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && b + c > a;
+}
