@@ -76,3 +76,7 @@ function nbYear(p0, percent, aug, p) {
 function isTriangle(a, b, c) {
   return a + b > c && a + c > b && b + c > a;
 }
+
+function oddOrEven(arr) {
+  return arr.reduce((a, b) => a + b, 0) % 2 ? "odd" : "even";
+}
