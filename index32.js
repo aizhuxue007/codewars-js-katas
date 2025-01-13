@@ -80,3 +80,10 @@ function isTriangle(a, b, c) {
 function oddOrEven(arr) {
   return arr.reduce((a, b) => a + b, 0) % 2 ? "odd" : "even";
 }
+
+var number = function (busStops) {
+  return (
+    busStops.reduce((acc, curr) => (acc += curr[0]), 0) -
+    busStops.reduce((acc, curr) => (acc += curr[1]), 0)
+  );
+};
