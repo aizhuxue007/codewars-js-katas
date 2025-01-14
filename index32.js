@@ -87,3 +87,10 @@ var number = function (busStops) {
     busStops.reduce((acc, curr) => (acc += curr[1]), 0)
   );
 };
+
+function reverseWords(str) {
+  return str
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+}
