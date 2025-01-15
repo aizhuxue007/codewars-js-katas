@@ -94,3 +94,11 @@ function reverseWords(str) {
     .map((word) => word.split("").reverse().join(""))
     .join(" ");
 }
+
+function factorial(n) {
+  let product = 1;
+  for (let i = 1; i <= n; i++) {
+    product *= i;
+  }
+  return product;
+}
