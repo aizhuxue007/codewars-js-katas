@@ -18,3 +18,12 @@ function stray(numbers) {
 function sortByLength(array) {
   return array.sort((a, b) => a.length - b.length);
 }
+
+function nbDig(n, d) {
+  let count = 0;
+  const re = RegExp(String.raw`${d}`, "gm");
+  for (let k = 0; k <= n; k++) {
+    count += String(k ** 2).match(re)?.length || 0;
+  }
+  return count;
+}
