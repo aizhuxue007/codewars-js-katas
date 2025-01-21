@@ -40,3 +40,13 @@ function arithmetic(a, b, operator) {
       return a / b;
   }
 }
+
+function calculateYears(principal, interest, tax, desired) {
+  let year = 0;
+  if (principal === desired) return year;
+  for (let i = 1; principal < desired; i++) {
+    year = i;
+    principal += principal * interest - principal * interest * tax;
+  }
+  return year;
+}
