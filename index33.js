@@ -55,3 +55,15 @@ function gimme(triplet) {
   const middle = [...triplet].sort((a, b) => a - b)[1];
   return triplet.indexOf(middle);
 }
+
+var capitals = function (word) {
+  const wordArr = word.split("");
+  const capIndexes = [];
+  for (let i = 0; i < word.length; i++) {
+    const code = word[i].charCodeAt(0);
+    if (code >= 65 && code <= 90) {
+      capIndexes.push(i);
+    }
+  }
+  return capIndexes;
+};
