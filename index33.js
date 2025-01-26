@@ -67,3 +67,7 @@ var capitals = function (word) {
   }
   return capIndexes;
 };
+
+function smallEnough(a, limit) {
+  return a.every((n) => n <= limit);
+}
