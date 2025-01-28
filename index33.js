@@ -71,3 +71,13 @@ var capitals = function (word) {
 function smallEnough(a, limit) {
   return a.every((n) => n <= limit);
 }
+
+function solve(s) {
+  const upperCaseCount = s
+    .split("")
+    .filter((c) => c === c.toUpperCase()).length;
+  const lowerCaseCount = s
+    .split("")
+    .filter((c) => c === c.toLowerCase()).length;
+  return upperCaseCount > lowerCaseCount ? s.toUpperCase() : s.toLowerCase();
+}
