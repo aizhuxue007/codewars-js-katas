@@ -92,3 +92,11 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
     if (firstFighter.health <= 0) return secondFighter.name;
   }
 }
+
+function maxMultiple(divisor, bound) {
+  let largestDivisor = 0;
+  for (let i = 1; i <= bound; i++) {
+    if (i % divisor === 0) largestDivisor = i;
+  }
+  return largestDivisor;
+}
