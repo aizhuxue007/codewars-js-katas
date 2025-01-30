@@ -100,3 +100,11 @@ function maxMultiple(divisor, bound) {
   }
   return largestDivisor;
 }
+
+function removeUrlAnchor(url) {
+  const anchorIndex = url.indexOf("#");
+  if (anchorIndex !== -1) return url.substring(0, anchorIndex);
+  return url;
+}
+
+// better solution => return url.split("#")[0];
