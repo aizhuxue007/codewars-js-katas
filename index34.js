@@ -14,3 +14,10 @@ function capitalize(s) {
       .join(""),
   ];
 }
+
+function rowWeights(array) {
+  return [
+    array.filter((n, i) => i % 2 === 0).reduce((acc, curr) => (acc += curr), 0),
+    array.filter((n, i) => i % 2 === 1).reduce((acc, curr) => (acc += curr), 0),
+  ];
+}
