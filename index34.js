@@ -21,3 +21,7 @@ function rowWeights(array) {
     array.filter((n, i) => i % 2 === 1).reduce((acc, curr) => (acc += curr), 0),
   ];
 }
+
+function getEvenNumbers(numbersArray) {
+  return numbersArray.filter((n) => n % 2 === 0);
+}
