@@ -25,3 +25,9 @@ function rowWeights(array) {
 function getEvenNumbers(numbersArray) {
   return numbersArray.filter((n) => n % 2 === 0);
 }
+
+("use strict");
+
+function flattenAndSort(array) {
+  return array.flat().sort((a, b) => a - b);
+}
