@@ -31,3 +31,7 @@ function getEvenNumbers(numbersArray) {
 function flattenAndSort(array) {
   return array.flat().sort((a, b) => a - b);
 }
+
+function angle(n) {
+    return (n - 2)*180;
+}
