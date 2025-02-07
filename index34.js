@@ -33,18 +33,24 @@ function flattenAndSort(array) {
 }
 
 function angle(n) {
-    return (n - 2)*180;
+  return (n - 2) * 180;
 }
 
 function mxdiflg(a1, a2) {
-    if (a1.length === 0 || a2.length === 0) return -1;
-    let largestDiff = 0;
-    let diff = 0;
-    a1.forEach(s => {
-        a2.forEach(s2 => {
-            diff = Math.abs(s.length - s2.length);
-            if (diff > largestDiff) largestDiff = diff;
-        })
-    })
-    return largestDiff;
+  if (a1.length === 0 || a2.length === 0) return -1;
+  let largestDiff = 0;
+  let diff = 0;
+  a1.forEach((s) => {
+    a2.forEach((s2) => {
+      diff = Math.abs(s.length - s2.length);
+      if (diff > largestDiff) largestDiff = diff;
+    });
+  });
+  return largestDiff;
+}
+
+function largestPairSum(numbers) {
+  const largestNum = numbers.sort((a, b) => b - a)[0];
+  const secondLargestNum = numbers[1];
+  return largestNum + secondLargestNum;
 }
