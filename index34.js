@@ -54,3 +54,7 @@ function largestPairSum(numbers) {
   const secondLargestNum = numbers[1];
   return largestNum + secondLargestNum;
 }
+
+function noOdds( values ){
+    return values.filter(n => n%2 === 0);
+}
