@@ -58,3 +58,7 @@ function largestPairSum(numbers) {
 function noOdds( values ){
     return values.filter(n => n%2 === 0);
 }
+
+function countDevelopers(list) {
+    return list.filter(dev => dev.continent === 'Europe' && dev.language === 'JavaScript').length;
+}
