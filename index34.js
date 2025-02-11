@@ -67,3 +67,31 @@ function evenNumbers(array, number) {
     const evens = array.filter(n => n%2 === 0);
     return evens.slice(evens.length - number);
 }
+
+function alphabetWar(fight)
+  {
+    const left = {
+        'w': 4,
+        'p': 3,
+        'b': 2,
+        's': 1
+      };
+    const right = {
+        'm': 4,
+        'q': 3,
+        'd': 2,
+        'z': 1
+      };
+    let leftSum = 0;
+    let rightSum = 0;
+    fight.split('').forEach(c => {
+        if (left.hasOwnProperty(c)) {
+            leftSum += left[c];
+          }
+        if (right.hasOwnProperty(c)) {
+            rightSum += right[c];
+          }
+      })
+    if ((leftSum === 0 && rightSum === 0) || leftSum === rightSum) return "Let's fight again!";
+    return leftSum > rightSum ? 'Left side wins!' : 'Right side wins!';
+}
