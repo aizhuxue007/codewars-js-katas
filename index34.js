@@ -62,3 +62,8 @@ function noOdds( values ){
 function countDevelopers(list) {
     return list.filter(dev => dev.continent === 'Europe' && dev.language === 'JavaScript').length;
 }
+
+function evenNumbers(array, number) {
+    const evens = array.filter(n => n%2 === 0);
+    return evens.slice(evens.length - number);
+}
