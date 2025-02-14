@@ -13,3 +13,6 @@ function isSortedAndHow(array) {
     return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':
     arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'
 } **/
+function bump(x){
+    return x.split('').filter(c => c === 'n').length > 15 ? 'Car Dead' : 'Woohoo!';
+}
