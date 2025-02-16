@@ -33,3 +33,7 @@ function fizzbuzz(n)
       }
     return result;
 }
+
+function digits(n) {
+    return String(n).length;
+}
