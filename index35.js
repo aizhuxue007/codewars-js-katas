@@ -49,3 +49,33 @@ function sumCubes(n){
 var greet = function(name) {
     return `Hello ${name[0].toUpperCase()}${name.substring(1).toLowerCase()}!`
 };
+
+class Block{
+
+    constructor(data){
+        const [width, length, height] = data;
+        this.width = width;
+        this.height = height;
+        this.length = length;
+      }
+    
+    getWidth() {
+        return this.width;
+      }
+    
+    getLength() {
+        return this.length;
+      }
+    
+    getHeight() {
+        return this.height;
+      }
+    
+    getVolume() {
+        return this.width*this.length*this.height;
+      }
+    
+    getSurfaceArea() {
+        return 2*this.width*this.length + 2*this.length*this.height + 2*this.height*this.width;
+      }
+}
