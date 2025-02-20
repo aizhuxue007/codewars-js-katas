@@ -79,3 +79,11 @@ class Block{
         return 2*this.width*this.length + 2*this.length*this.height + 2*this.height*this.width;
       }
 }
+
+function vowelIndices(word){
+    const result = [];
+    for (let i = 0; i < word.length; i++) {
+        if ('aeiouy'.includes(word[i].toLowerCase())) result.push(i + 1);
+      }
+    return result;
+}
