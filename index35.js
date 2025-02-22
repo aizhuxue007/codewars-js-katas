@@ -92,3 +92,21 @@ function isPowerOfTwo(n){
     if (n === 0) return false;
     return (n&(n - 1)) === 0 ? true : false;
 }
+
+function minSum(arr) {
+    let minimizedSum = 0;
+    arr.sort((a, b) => a - b);
+    for (let i = 0; i < Math.floor(arr.length/2); i++) {
+        minimizedSum += arr[i]*arr[arr.length - 1 - i];
+      }
+    return minimizedSum;
+}
+
+/**
+ *function minSum(arr) {
+   return arr.sort( (a,b) => a-b )
+               .slice(0, arr.length/2)
+                           .reduce( (acc,curr,index) => acc += curr * arr[ arr.length - index - 1 ], 0 )
+                      
+ }
+ * **/
