@@ -10,3 +10,12 @@ function reverseNumber(n) {
 function filterString(value) {
     return +value.split('').filter(c => !isNaN(c)).join('');
 }
+
+function sumTriangularNumbers(n) {
+    if (n < 0) return 0;
+    let triangularSum = 0;
+    for (let i = 1; i <= n; i++) {
+        triangularSum += i*(i + 1)/2;
+      }
+    return triangularSum;
+}
