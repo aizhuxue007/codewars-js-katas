@@ -19,3 +19,11 @@ function sumTriangularNumbers(n) {
       }
     return triangularSum;
 }
+
+function solve(arr) {
+    return arr.map(word => 
+      word.split('').filter((letter, i) => 
+          'abcdefghijklmnopqrstuvwxyz'.indexOf(letter.toLowerCase()) + 1 === i + 1
+        ).length
+    );
+}
