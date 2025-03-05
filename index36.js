@@ -37,3 +37,11 @@ const solve = arr => [...new Set(arr.reverse())].reverse();
 function maxDiff(list) {
     return list.length === 0 ? 0 : Math.max(...list) - Math.min(...list);
 };
+
+reverse = function(array) {
+    const result = []
+    for (let i = array.length - 1; i >= 0; i--) {
+        result.push(array[i]);
+      }
+    return result;
+}
