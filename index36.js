@@ -45,3 +45,11 @@ reverse = function(array) {
       }
     return result;
 }
+
+function findLongest(array){
+    let longest = 0;
+    array.forEach(num => {
+        if (String(num).length > String(longest).length) longest = num;
+      })
+    return longest;
+}
