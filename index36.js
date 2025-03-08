@@ -58,3 +58,11 @@ const orderedCount = function (text) {
     let allLetters = [...new Set(text.split(''))];
     return allLetters.map(letter => [letter, text.split('').filter(c => c === letter).length]);
 }
+
+function greetDevelopers(list) {
+    return list.map(person => ({
+          ...person,
+          greeting: `Hi ${person.firstName}, what do you like the most about ${person.language}?`
+        })
+      )
+}
