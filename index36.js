@@ -53,3 +53,8 @@ function findLongest(array){
       })
     return longest;
 }
+
+const orderedCount = function (text) {
+    let allLetters = [...new Set(text.split(''))];
+    return allLetters.map(letter => [letter, text.split('').filter(c => c === letter).length]);
+}
