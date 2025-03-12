@@ -70,3 +70,11 @@ function greetDevelopers(list) {
 function nthSmallest(arr, pos){
     return arr.sort((a, b) => a - b)[pos - 1];
 }
+
+function findDigit(num, nth) {
+    const reverseNum = String(num).split('').reverse();
+    if (nth < 0) return -1;
+    if (reverseNum.length < nth) return 0;
+    if (nth === 0) return -1;
+    return reverseNum[nth - 1] !== '-' ? +reverseNum[nth - 1] : 0;
+}
