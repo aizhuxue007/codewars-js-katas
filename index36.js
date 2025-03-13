@@ -78,3 +78,8 @@ function findDigit(num, nth) {
     if (nth === 0) return -1;
     return reverseNum[nth - 1] !== '-' ? +reverseNum[nth - 1] : 0;
 }
+
+function cubeOdd(arr) {
+    if (arr.some(item => typeof item !== 'number')) return undefined;
+    return arr.filter(n => Math.abs(n)%2 === 1).map(n => n**3).reduce((acc, curr) => acc += curr, 0);
+}
