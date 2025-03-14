@@ -83,3 +83,8 @@ function cubeOdd(arr) {
     if (arr.some(item => typeof item !== 'number')) return undefined;
     return arr.filter(n => Math.abs(n)%2 === 1).map(n => n**3).reduce((acc, curr) => acc += curr, 0);
 }
+
+function getFirstPython(list) {
+    const firstPythonDev = list.filter(person => person.language === 'Python')[0];
+    return firstPythonDev ? `${firstPythonDev.firstName}, ${firstPythonDev.country}` : 'There will be no Python developers';
+}
