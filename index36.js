@@ -88,3 +88,10 @@ function getFirstPython(list) {
     const firstPythonDev = list.filter(person => person.language === 'Python')[0];
     return firstPythonDev ? `${firstPythonDev.firstName}, ${firstPythonDev.country}` : 'There will be no Python developers';
 }
+
+function gps(s, x) {
+    if (x.length <= 1) return 0;
+    const deltaDistances = Array.from({ length: x.length - 1 }, (_, i) => x[i + 1] - x[i]);
+    const avgHourlySpeeds = deltaDistances.map(deltaDistance => Math.floor((3600*deltaDistance)/s));
+    return Math.max(...avgHourlySpeeds);
+}
