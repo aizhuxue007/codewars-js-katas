@@ -12,3 +12,10 @@ function solve(s){
            s.match(/[0-9]/g)?.length || 0, 
            s.match(/[^A-Za-z0-9]/g)?.length || 0];
 }
+
+function multiplyAll(array) {
+    return function(scalar) {
+        return array.map(n => n*scalar);
+      }
+}
+
