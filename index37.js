@@ -23,3 +23,8 @@ function min(arr, toReturn) {
     const min = Math.min(...arr);
     return toReturn === 'value' ? min : arr.indexOf(min);
 }
+
+function menFromBoys(arr){
+    const uniqueArr = [...new Set(arr)];
+    return [...uniqueArr.filter(n => n%2 === 0).sort((a, b) => a - b), ...uniqueArr.filter(n => Math.abs(n)%2 === 1).sort((a, b) => b - a)];
+}
