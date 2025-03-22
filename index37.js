@@ -29,4 +29,11 @@ function menFromBoys(arr){
     return [...uniqueArr.filter(n => n%2 === 0).sort((a, b) => a - b), ...uniqueArr.filter(n => Math.abs(n)%2 === 1).sort((a, b) => b - a)];
 }
 
-// nothing
+function last(x){
+    return x.split(' ').sort((a, b) => {
+        const lastA = a[a.length - 1];
+        const lastB = b[b.length - 1];
+        if (lastA === lastB) return 0;
+        return lastA < lastB ? -1 : 1;
+      });
+}
