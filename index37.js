@@ -37,3 +37,22 @@ function last(x){
         return lastA < lastB ? -1 : 1;
       });
 }
+
+var SequenceSum = (function() {
+  function SequenceSum() {}
+
+    SequenceSum.showSequence = function(count) {
+        if (count < 0) return `${count}<0`;
+            if (count === 0) return `0=0`;
+                let resultStr = [];
+                    let sum = 0;
+                        for (let i = 0; i <= count; i++) {
+                              resultStr.push(i);
+                                    sum += i;
+                                        }
+                                            return resultStr.join('+') + ` = ${sum}`;
+                                              };
+
+                                                return SequenceSum;
+
+                                                })();
