@@ -55,4 +55,7 @@ var SequenceSum = (function() {
 
                                                 return SequenceSum;
 
-                                                })();
+function maxTriSum(numbers){
+    const uniqueNums = [...new Set(numbers)].sort((a, b) => b - a);
+    return uniqueNums.slice(0, 3).reduce((acc, curr) => acc += curr, 0);
+}});
