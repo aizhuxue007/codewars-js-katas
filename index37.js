@@ -59,3 +59,8 @@ function maxTriSum(numbers){
     const uniqueNums = [...new Set(numbers)].sort((a, b) => b - a);
     return uniqueNums.slice(0, 3).reduce((acc, curr) => acc += curr, 0);
 }});
+
+function explode(s) {
+    if (s.length < 1) return '';
+    return s.split('').map(l => Array(Number(l)).fill(l).join('')).join('');
+}
