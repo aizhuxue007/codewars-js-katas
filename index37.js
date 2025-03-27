@@ -64,3 +64,8 @@ function explode(s) {
     if (s.length < 1) return '';
     return s.split('').map(l => Array(Number(l)).fill(l).join('')).join('');
 }
+
+function incrementer(nums) {
+    if (nums.length < 1) return [];
+    return nums.map((x, i) => (x + (i + 1))%10);
+}
