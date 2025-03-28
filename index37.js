@@ -69,3 +69,9 @@ function incrementer(nums) {
     if (nums.length < 1) return [];
     return nums.map((x, i) => (x + (i + 1))%10);
 }
+
+function outed(meet, boss){
+    const people = Object.entries(meet);
+    const happiness = (people.filter(([key])=> key !== boss).reduce((acc, [, value]) => acc += value, 0) + meet[boss]*2)/Object.keys(meet).length;
+    return happiness <= 5 ?  "Get Out Now!": "Nice Work Champ!";
+}
