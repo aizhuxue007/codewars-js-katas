@@ -75,3 +75,8 @@ function outed(meet, boss){
     const happiness = (people.filter(([key])=> key !== boss).reduce((acc, [, value]) => acc += value, 0) + meet[boss]*2)/Object.keys(meet).length;
     return happiness <= 5 ?  "Get Out Now!": "Nice Work Champ!";
 }
+
+function removeRotten(bagOfFruits){
+    if (!bagOfFruits || bagOfFruits.length < 1) return [];
+    return bagOfFruits.map(fruit => fruit.split('rotten').join('').toLowerCase());
+}
