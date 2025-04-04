@@ -6,3 +6,20 @@ function squares(x, n) {
       }
   return squaresArr;
 }
+
+function boredom(staff){
+    const boredomScores = {
+    accounts: 1,
+    finance: 2,
+    canteen: 10,
+    regulation: 3,
+    trading: 6,
+    change: 6,
+    IS: 8,
+    retail: 5,
+    cleaning: 4,
+    "pissing about": 25
+  };
+    const totalScore = Object.values(staff).map(department => boredomScores[department]).reduce((acc, curr) => acc += curr, 0);
+    return totalScore <= 80 ? 'kill me now' : totalScore > 80 && totalScore < 100 ? 'i can handle this' : 'party time!!';
+}
