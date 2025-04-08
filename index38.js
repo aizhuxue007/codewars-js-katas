@@ -23,3 +23,7 @@ function boredom(staff){
     const totalScore = Object.values(staff).map(department => boredomScores[department]).reduce((acc, curr) => acc += curr, 0);
     return totalScore <= 80 ? 'kill me now' : totalScore > 80 && totalScore < 100 ? 'i can handle this' : 'party time!!';
 }
+
+function capitalize(s,arr){
+    return s.split('').map((c, i) => arr.includes(i) ? c.toUpperCase() : c).join('');
+};
