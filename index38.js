@@ -36,3 +36,9 @@ function getSumOfDigits(integer) {
       };
     return sum;
 }
+
+function countLanguages(list) {
+    const keys = [...new Set(list.map(developer => developer.language))];
+    const vals = keys.map(language => list.filter(person => person.language === language).length);
+    return Object.fromEntries(keys.map((key, index) => [key, vals[index]]));
+}
